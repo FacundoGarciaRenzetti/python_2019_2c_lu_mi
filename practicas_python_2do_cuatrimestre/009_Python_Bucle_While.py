@@ -1,205 +1,57 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# AGT
-# Copyright 2019 Ariel H Garcia Traba <cursos.arT@gmail.com>
-def limpiar():
-    import os
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
-        
-"""
-╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗                                                                      ░ ▒ ▓ ┌┐┤│├└┘┴┬─┼╔╗╠╬╣║╚╝╩╦═¤
-║TEMARIO:                                                                                                                ║
-║--------                                                                                                                ║
-║Unidad 1 - Introducción                                                                                                 ║
-║● ¿Qué es Python?                                                                                                       ║
-║● Ventajas y desventajas                                                                                                ║
-║● Ecosistema Python y Comunidad –Librerías extendidas                                                                   ║
-║● Descarga –Opensource                                                                                                  ║
-║● Instalación, configuración y hardware necesario                                                                       ║
-║● Errores sintácticos y lógicos, localización en pantalla y correcciones                                                ║
-║● Importancia del versionado                                                                                            ║
-║● GIT Colaborativo –Pair Programming                                                                                    ║
-║	o Introducción a GIT                                                                                                 ║
-║	o Creando un repositorio, clonar, branches                                                                           ║
-║	oBorrar, guardar (STASH), requperar (POP)                                                                            ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 2 – Software                                                                                                     ║
-║Características de Python                                                                                               ║
-║● Software libre                                                                                                        ║
-║● Alto nivel                                                                                                            ║
-║● Multiparadigma                                                                                                        ║
-║● Portable                                                                                                              ║
-║● Programación Secuencial y Orientada a Objetos                                                                         ║
-║● Multiplataforma                                                                                                       ║
-║● Interpretado                                                                                                          ║
-║● Tipado dinámico                                                                                                       ║
-║● Estructura (TAB)                                                                                                      ║
+from Estructura import *
+nuevo(0,"inicio");
+#################################################################
+import math
+def Echos():
+	#Con tab colocaremos aqui las precticas hechas
+	pass
+print("""
+╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                        ║
-║Entorno de Desarrollo Intérprete – IDEs                                                                                 ║
-║● Elección según el propósito del trabajo:                                                                              ║
-║	PyCharm, PyDev, Atom, Spyder, PyScripter, Eclipse, IPython.                                                          ║
-║● Entornos especiales: Anaconda (Data Science Platform),  Jupyter (Notebooks).                                          ║
-║● Consola, pantalla gráfica y entorno                                                                                   ║
-║● Salida de datos por pantalla                                                                                          ║
-║	o Sentencias: print ()                                                                                               ║
-║● Ingreso de datos por teclado                                                                                          ║
-║● Sentencias: input ()                                                                                                  ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 3 - Estructura y primeros Trabajos con datos                                                                     ║
-║Variables, Constantes                                                                                                   ║
-║● Flujo de datos, estructura, linealidad, condicionales, bucles                                                         ║
-║● Estructuras condicionales simples, compuestas y anidadas                                                              ║
-║● Sentencias: If , elif, else, :                                                                                        ║
-║● Estructuras repetitivas                                                                                               ║
-║● Sentencias:  for, range, while, else :                                                                                ║
-║● Estructuras modificaciones                                                                                            ║
-║● Sentencias:  break, continue, pass                                                                                    ║
-║● Operadores:                                                                                                           ║
-║● Comparación: ==, <, <=, >, >=, !=                                                                                     ║
-║● Lógicos:  and, not, or                                                                                                ║
-║● Aritméticos: +,-*, **, /, //, %, (ver librería math)                                                                  ║
-║● Asignación: =, += , - = , *=  , ** , /= , //= , %=                                                                    ║
-║● Especiales: is, is not,  in, not in                                                                                   ║
-║Espacios, nombres, ámbitos, objetos                                                                                     ║
-║● Variables y constantes - Tipos                                                                                        ║
-║● Procesamiento de cadenas                                                                                              ║
-║Listas [variables]                                                                                                      ║
-║● Índices                                                                                                               ║
-║● Recorrer listas                                                                                                       ║
-║● Sentencias:  append(),  clear(), copy(), count(), extend(), index(), insert(), pop(), remove(), reverse(), sort(), etc║
-║Tuplas (Constantes)                                                                                                     ║
-║● Índices                                                                                                               ║
-║● Recorrer Tuplas                                                                                                       ║
-║● Sentencias:  index(), count(), etc.                                                                                   ║
-║Diccionarios {clave:valor asociado}                                                                                     ║
-║● Funcionamiento de diccionarios                                                                                        ║
-║● Sentencias:  clear(), copy(), fromkeys(), get(), items(), keys(), pop(),                                              ║
-║● popitem(), reverse(), setdefault(), update(), values(), etc.                                                          ║
-║● Sets y otros                                                                                                          ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 4 – Funciones                                                                                                    ║
-║● Iterar: ejecución repetida de un conjunto de sentencias                                                               ║
-║Sentencias:  def (): return                                                                                             ║
-║● Parámetros de entrada de datos                                                                                        ║
-║● Retorno de datos a la salida                                                                                          ║
-║● Return de listas                                                                                                      ║
-║● Parámetros con valor por defecto (=val;*;**)                                                                          ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 5 – Módulos y Librerías                                                                                          ║
-║● Uso de métodos y funciones de un archivo externo Sentencias: Import, from                                             ║
-║● Generar un modulo                                                                                                     ║
-║● Uso de librerías                                                                                                      ║
-║● Generar archivos, leerlos, escribirlos (TXT - plano/ Binario) JSON (Javascript) Pickle (Python)                       ║
-║● Instalación de librerías, ecosistema,                                                                                 ║
-║Métodos: pip, conda,                                                                                                    ║
-║Download e instalación MSI, Linuc, etc                                                                                  ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 6 – Clases Sistema para empaquetar atributos de datos y funcionalidad métodos para instanciar                    ║
-║Sentencias: class ():, self                                                                                             ║
-║● Objetos clases                                                                                                        ║
-║● Objetos instancias                                                                                                    ║
-║● Objetos métodos                                                                                                       ║
-║● Herencias, herencias múltiples                                                                                        ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 7 – Entorno visual - WEB Django Pantallas graficas - Libreria: tkinter, numpy y matplotli                        ║
-║● Pantallas, Frames, Labels, bottons,etc                                                                                ║
-║● Ubicación de elementos, colores, formatos, tamaños, etc.                                                              ║
-║● Ingreso de daros desde pantalla (get)                                                                                 ║
-║● Salida de datos por pantalla                                                                                          ║
-║● Acciones de botones para llamar a funciones                                                                           ║
-║● Graficas de funciones matematicas y otros datos.( series, tortas, 3d, etc.)                                           ║
-║● Python y “Django” e la web framework                                                                                  ║
-║Ejemplos de uso intensivo de Django (Instagram, Pinterest, Mozilla, National Geografic, etc.)                           ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 8 – Bases de Datos locales y en la nube                                                                          ║
-║Tipo: SQL (Mysql) y NoSQL (Mongo)                                                                                       ║
-║Librería: mysql.connector                                                                                               ║
-║Librería: pymongo                                                                                                       ║
-║● Python y “Big Data”                                                                                                   ║
-║● Conexión                                                                                                              ║
-║● cursor(), .execute(), .close                                                                                          ║
-║● Crear Bases, tablas, columnas                                                                                         ║
-║● Tipos de datos, caracteres, numéricos, fecha - hora                                                                   ║
-║● Buscar, insertar, actualizar, borrar, seleccionar, elementos desde y hacia una base de datos                          ║
-║● Where, from. %like%                                                                                                   ║
-║● Firebase, Google Cloud IoT -u otro hub para OIT AWS (Amazon) Azure (MSoft)                                            ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 9 – Fechas, Horas                                                                                                ║
-║● Modulo time, datetime                                                                                                 ║
-║● Manejo de fechas y horas                                                                                              ║
-║● Uso en aplicaciones web, base de datos, multiplataforma, etc.                                                         ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 10 – Internet Of Things – IOT                                                                                    ║
-║● Programación de eventos - Timed Event                                                                                 ║
-║Librería:                                                                                                               ║
-║Scheduler                                                                                                               ║
-║● Módulo sched / Scheduler                                                                                              ║
-║● Declaración de programadores                                                                                          ║
-║● Llamado a funciones como eventos                                                                                      ║
-║● Programar eventos y poner en marcha el programador                                                                    ║
-║● Programación de eventos considerando prioridades                                                                      ║
-║● Cancelación de eventos                                                                                                ║
-║● Python y Internet Of Things – IOT                                                                                     ║
-║● Python y MicroControladores (un matrimonio perfecto)                                                                  ║
-║	Librería:	Zerynth                                                                                                  ║
-║	Ejemplos de uso intensivo de Raspberry Pi y NodeMCU (ESP8266)                                                        ║
-║IOT Con BBDD, Python y Android                                                                                          ║
-║● Python y Amazon - AWS IoT                                                                                             ║
-║● Protocolo MQTT                                                                                                        ║
+║                                   Bucles // while                                                                      ║
+║                                                                                                                        ║
 ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-"""
-print("############################################################################");     
-print("##                                                                        ##");
-print("##                           Bucles // while                              ##");
-print("##                                                                        ##");
-print("############################################################################");
-print("Inicio ej004_2_1");
+""");
+nuevo(0,"inicio");
+#################################################################
+#Clase_While_Ej_01 
 contador = 1
 while contador<10:
 	print (contador);
 	contador +=1
 print ("FIN");
-print (input("Fin ej004_2_1 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_2
-print("Inicio ej004_2_2");
+nuevo(1);
+#################################################################
+#Clase_While_Ej_02
 edad=0
 print ("venta de alcohol en boliches");
 edad=int(input("ingrese su edad :"));
 while edad<18:
 	print ("Cometio un error al ingresar la edad o es menor y debe retirarse");
 	edad=int(input("ingrese su edad :"));
+else:
 	print("que desea beber.......fin....");
-print (input("Fin ej004_2_2 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_3
-print("Inicio ej004_2_3 - break" );
+nuevo(2);
+#################################################################
+#Clase_While_Ej_03
+print(" break" );
 print ("venta de alcohol en boliches");
 edad=int(input("ingrese su edad :"));
 while edad<18:
-	print ("Cometio un error al ingresar la edad o es menor debe ingresar'0' y retirarse");
+	print ("Cometio un error al ingresar la edad o es menor debe ingresar un valor'<10' y retirarse");
 	edad=int(input("ingrese su edad :"));
-	if edad==0:
+	if edad<=10:
 		print ("toma una cindor y Adios");
 		break
-if edad>18:
+else:
 	print("que desea beber.......fin....");
-print (input("Fin ej004_2_3 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_4
-#print("Inicio ej004_2_4 - intentos");
-#print (input("Fin ej004_2_4"); print("");
-#print(input("continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_5
-import math
+nuevo(3);
+#################################################################
+#Clase_While_Ej_04
+print("solos rehacer el ej anterior 10 intentos");
+nuevo(4);
+#################################################################
+#Clase_While_Ej_05
 valor=0
 print("Inicio ej004_2_5 - math");
 valor=int(input("Ingrese numero para sacar raiz cuadrada:"));
@@ -208,13 +60,11 @@ while valor<0:
 resultado = math.sqrt(valor);
 print ("la raiz cuadrada de :"+str(valor));
 print ("son : + -"+str(resultado));
-print (input("Fin ej004_2_5 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_6
-print("Inicio ej004_2_6");
+nuevo(5);
+#################################################################
+#Clase_While_Ej_06
 arroba = False
-for i in "Facundo@hotmail.com":
+for i in "email_@hotmail.com":
 	print ("valor del string "+str(i));
 	if str(i)=="@":
 		arroba = True
@@ -222,13 +72,11 @@ if arroba==True:
 	print ("tiene @ puede ser mail");
 else:
 	print ("No puede ser mail");
-print (input("Fin ej004_2_6 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_7
-print("Inicio ej004_2_7");
+nuevo(6);
+#################################################################
+#Clase_While_Ej_07
 arroba = False
-for i in "Facundo@hotmail.com":
+for i in "email_@hotmail.com":
 	print ("valor del string "+str(i));
 	if str(i)=="@":
 		arroba = True
@@ -237,57 +85,42 @@ if arroba==True:
 	print ("tiene @ puede ser mail");
 else:
 	print ("No puede ser mail");
-print (input("Fin ej004_2_7 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_8
-print("Inicio ej004_2_8");
+nuevo(7);
+#################################################################
+#Clase_While_Ej_08
 print ("verificar si tiene @ y como minimo un punto.");
-print (input("Fin ej004_2_8 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_9
-print("Inicio ej004_2_9");
+nuevo(8);
+#################################################################
+#Clase_While_Ej_09
 print ("verificar si tiene mas de un @ y como minimo un punto.");
-print (input("Fin ej004_2_9 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_10
-print("Inicio ej004_2_10");
+nuevo(9);
+#################################################################
+#Clase_While_Ej_10
 print ("verificar si tiene mas de un @ y como minimo un punto. y caracteres alfanumericos");
-print (input("Fin ej004_2_10 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_11
-print("Inicio ej004_2_11");
-multiplica = []
+nuevo(10);
+#################################################################
+#Clase_While_Ej_11
+multiplica =[]
 for n in range(1,16):
-    multiplica.append(n**3)
-print(multiplica)
-
+	multiplica.append(n**3)
+print("Ej 1",multiplica)
 multiplica = [n**3 for n in range(1,16)]
-print(multiplica)
-
-print (input("Fin ej004_2_11 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_12
-print("Inicio ej004_2_12");
-multiplica = []
+print("Ej 2",multiplica)
+nuevo(11);
+#################################################################
+#Clase_While_Ej_12
+print("Ej 1",multiplica)
 for i in range(1, 11):
     for n in range(1, 11):
         multiplica.append(i*n)
 print(multiplica)
 
 multiplica = [i*n for i in range(1,11) for n in range(1,11)]
-print(multiplica)
-
-print (input("Fin ej004_2_12 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_13
-print("Inicio ej004_2_13");
-
+print("Ej 2",multiplica)
+print("Ej 3", [i*n for i in range(1,11) for n in range(1,11)])
+nuevo(12);
+#################################################################
+#Clase_While_Ej_13
 matrix = [
 	[1, 2, 3, 4],
 	[5, 6, 7, 8],
@@ -301,12 +134,9 @@ for i in range(4):
 #transpose = [[row[n] for row in matrix] for n in range(4)]
 print(transpose)
 
-print (input("Fin ej004_2_13 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_14
-print("Inicio ej004_2_14");
-
+nuevo(13);
+#################################################################
+#Clase_While_Ej_14
 cadena = "Python"
 for caracter in cadena:# Recorrer los caracteres de una cadena:
     print(caracter)
@@ -330,11 +160,9 @@ for clave, valor in artistas.items():
 
 for linea in open("datos.txt"):# Leer las líneas de un archivo de texto, una a una
     print(linea.rstrip())
-print (input("Fin ej004_2_11 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_12
-print("Inicio ej004_2_12");
+nuevo(14);
+#################################################################
+#Clase_While_Ej_15
 
 print("""LEER \n https://python-para-impacientes.blogspot.com/2015/08/bucles-eficientes-con-itertools.html \n
 Funciones que devuelven iterables infinitos
@@ -567,12 +395,9 @@ Devuelve un iterable que agrega elementos de cada uno de los iterables de entrad
 for elemento in zip_longest(['x','y','z'], ['0','1'], 
                             fillvalue='#'):
     print(elemento, end = ' ')
-
-print (input("Fin ej004_2_12 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 004_2_13
-print("Inicio ej004_2_13");
+nuevo(15);
+#################################################################
+#Clase_While_Ej_16
 print("""
 Generadores para combinatoria
 =============================
@@ -612,3 +437,5 @@ Devuelve un objeto iterable basado en tuplas con las combinaciones con repetici�
 									itertools.combinations_with_replacement(iterable, r)""");
 for elemento in combinations_with_replacement("123", 2):
     print(elemento, end = ' ')
+nuevo(16);
+#################################################################

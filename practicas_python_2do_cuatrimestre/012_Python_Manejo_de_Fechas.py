@@ -1,171 +1,28 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# AGT
-# Copyright 2019 Ariel H Garcia Traba <cursos.arT@gmail.com>
-def limpiar():
-    import os
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
-        
-"""
-╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗                                                                      ░ ▒ ▓ ┌┐┤│├└┘┴┬─┼╔╗╠╬╣║╚╝╩╦═¤
-║TEMARIO:                                                                                                                ║
-║--------                                                                                                                ║
-║Unidad 1 - Introducción                                                                                                 ║
-║● ¿Qué es Python?                                                                                                       ║
-║● Ventajas y desventajas                                                                                                ║
-║● Ecosistema Python y Comunidad –Librerías extendidas                                                                   ║
-║● Descarga –Opensource                                                                                                  ║
-║● Instalación, configuración y hardware necesario                                                                       ║
-║● Errores sintácticos y lógicos, localización en pantalla y correcciones                                                ║
-║● Importancia del versionado                                                                                            ║
-║● GIT Colaborativo –Pair Programming                                                                                    ║
-║	o Introducción a GIT                                                                                                 ║
-║	o Creando un repositorio, clonar, branches                                                                           ║
-║	oBorrar, guardar (STASH), requperar (POP)                                                                            ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 2 – Software                                                                                                     ║
-║Características de Python                                                                                               ║
-║● Software libre                                                                                                        ║
-║● Alto nivel                                                                                                            ║
-║● Multiparadigma                                                                                                        ║
-║● Portable                                                                                                              ║
-║● Programación Secuencial y Orientada a Objetos                                                                         ║
-║● Multiplataforma                                                                                                       ║
-║● Interpretado                                                                                                          ║
-║● Tipado dinámico                                                                                                       ║
-║● Estructura (TAB)                                                                                                      ║
+from Estructura import *
+nuevo(0,"inicio");
+#################################################################
+def Echos():
+	#Con tab colocaremos aqui las precticas hechas
+	pass
+print("""
+╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                        ║
-║Entorno de Desarrollo Intérprete – IDEs                                                                                 ║
-║● Elección según el propósito del trabajo:                                                                              ║
-║	PyCharm, PyDev, Atom, Spyder, PyScripter, Eclipse, IPython.                                                          ║
-║● Entornos especiales: Anaconda (Data Science Platform),  Jupyter (Notebooks).                                          ║
-║● Consola, pantalla gráfica y entorno                                                                                   ║
-║● Salida de datos por pantalla                                                                                          ║
-║	o Sentencias: print ()                                                                                               ║
-║● Ingreso de datos por teclado                                                                                          ║
-║● Sentencias: input ()                                                                                                  ║
+║              Unidad 5 - MySQL, Parte 1                                                                                 ║
+║                 * INSERT, UPDATE, DELETE, SELECT                                                                       ║
+║                 * FECHAS Y HORAS                                                                                       ║
+║                 * %LIKE%                                                                                               ║
+║                 * JOIN                                                                                                 ║
+║                                                                                                                        ║
 ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 3 - Estructura y primeros Trabajos con datos                                                                     ║
-║Variables, Constantes                                                                                                   ║
-║● Flujo de datos, estructura, linealidad, condicionales, bucles                                                         ║
-║● Estructuras condicionales simples, compuestas y anidadas                                                              ║
-║● Sentencias: If , elif, else, :                                                                                        ║
-║● Estructuras repetitivas                                                                                               ║
-║● Sentencias:  for, range, while, else :                                                                                ║
-║● Estructuras modificaciones                                                                                            ║
-║● Sentencias:  break, continue, pass                                                                                    ║
-║● Operadores:                                                                                                           ║
-║● Comparación: ==, <, <=, >, >=, !=                                                                                     ║
-║● Lógicos:  and, not, or                                                                                                ║
-║● Aritméticos: +,-*, **, /, //, %, (ver librería math)                                                                  ║
-║● Asignación: =, += , - = , *=  , ** , /= , //= , %=                                                                    ║
-║● Especiales: is, is not,  in, not in                                                                                   ║
-║Espacios, nombres, ámbitos, objetos                                                                                     ║
-║● Variables y constantes - Tipos                                                                                        ║
-║● Procesamiento de cadenas                                                                                              ║
-║Listas [variables]                                                                                                      ║
-║● Índices                                                                                                               ║
-║● Recorrer listas                                                                                                       ║
-║● Sentencias:  append(),  clear(), copy(), count(), extend(), index(), insert(), pop(), remove(), reverse(), sort(), etc║
-║Tuplas (Constantes)                                                                                                     ║
-║● Índices                                                                                                               ║
-║● Recorrer Tuplas                                                                                                       ║
-║● Sentencias:  index(), count(), etc.                                                                                   ║
-║Diccionarios {clave:valor asociado}                                                                                     ║
-║● Funcionamiento de diccionarios                                                                                        ║
-║● Sentencias:  clear(), copy(), fromkeys(), get(), items(), keys(), pop(),                                              ║
-║● popitem(), reverse(), setdefault(), update(), values(), etc.                                                          ║
-║● Sets y otros                                                                                                          ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 4 – Funciones                                                                                                    ║
-║● Iterar: ejecución repetida de un conjunto de sentencias                                                               ║
-║Sentencias:  def (): return                                                                                             ║
-║● Parámetros de entrada de datos                                                                                        ║
-║● Retorno de datos a la salida                                                                                          ║
-║● Return de listas                                                                                                      ║
-║● Parámetros con valor por defecto (=val;*;**)                                                                          ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 5 – Módulos y Librerías                                                                                          ║
-║● Uso de métodos y funciones de un archivo externo Sentencias: Import, from                                             ║
-║● Generar un modulo                                                                                                     ║
-║● Uso de librerías                                                                                                      ║
-║● Generar archivos, leerlos, escribirlos (TXT - plano/ Binario) JSON (Javascript) Pickle (Python)                       ║
-║● Instalación de librerías, ecosistema,                                                                                 ║
-║Métodos: pip, conda,                                                                                                    ║
-║Download e instalación MSI, Linuc, etc                                                                                  ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 6 – Clases Sistema para empaquetar atributos de datos y funcionalidad métodos para instanciar                    ║
-║Sentencias: class ():, self                                                                                             ║
-║● Objetos clases                                                                                                        ║
-║● Objetos instancias                                                                                                    ║
-║● Objetos métodos                                                                                                       ║
-║● Herencias, herencias múltiples                                                                                        ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 7 – Entorno visual - WEB Django Pantallas graficas - Libreria: tkinter, numpy y matplotli                        ║
-║● Pantallas, Frames, Labels, bottons,etc                                                                                ║
-║● Ubicación de elementos, colores, formatos, tamaños, etc.                                                              ║
-║● Ingreso de daros desde pantalla (get)                                                                                 ║
-║● Salida de datos por pantalla                                                                                          ║
-║● Acciones de botones para llamar a funciones                                                                           ║
-║● Graficas de funciones matematicas y otros datos.( series, tortas, 3d, etc.)                                           ║
-║● Python y “Django” e la web framework                                                                                  ║
-║Ejemplos de uso intensivo de Django (Instagram, Pinterest, Mozilla, National Geografic, etc.)                           ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 8 – Bases de Datos locales y en la nube                                                                          ║
-║Tipo: SQL (Mysql) y NoSQL (Mongo)                                                                                       ║
-║Librería: mysql.connector                                                                                               ║
-║Librería: pymongo                                                                                                       ║
-║● Python y “Big Data”                                                                                                   ║
-║● Conexión                                                                                                              ║
-║● cursor(), .execute(), .close                                                                                          ║
-║● Crear Bases, tablas, columnas                                                                                         ║
-║● Tipos de datos, caracteres, numéricos, fecha - hora                                                                   ║
-║● Buscar, insertar, actualizar, borrar, seleccionar, elementos desde y hacia una base de datos                          ║
-║● Where, from. %like%                                                                                                   ║
-║● Firebase, Google Cloud IoT -u otro hub para OIT AWS (Amazon) Azure (MSoft)                                            ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 9 – Fechas, Horas                                                                                                ║
-║● Modulo time, datetime                                                                                                 ║
-║● Manejo de fechas y horas                                                                                              ║
-║● Uso en aplicaciones web, base de datos, multiplataforma, etc.                                                         ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 10 – Internet Of Things – IOT                                                                                    ║
-║● Programación de eventos - Timed Event                                                                                 ║
-║Librería:                                                                                                               ║
-║Scheduler                                                                                                               ║
-║● Módulo sched / Scheduler                                                                                              ║
-║● Declaración de programadores                                                                                          ║
-║● Llamado a funciones como eventos                                                                                      ║
-║● Programar eventos y poner en marcha el programador                                                                    ║
-║● Programación de eventos considerando prioridades                                                                      ║
-║● Cancelación de eventos                                                                                                ║
-║● Python y Internet Of Things – IOT                                                                                     ║
-║● Python y MicroControladores (un matrimonio perfecto)                                                                  ║
-║	Librería:	Zerynth                                                                                                  ║
-║	Ejemplos de uso intensivo de Raspberry Pi y NodeMCU (ESP8266)                                                        ║
-║IOT Con BBDD, Python y Android                                                                                          ║
-║● Python y Amazon - AWS IoT                                                                                             ║
-║● Protocolo MQTT                                                                                                        ║
+║                                                                                                                        ║
+║                                 Fecha  / hora                                                                          ║
+║                                                                                                                        ║
+║                                                                                                                        ║
 ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-"""
-print("############################################################################");
-print("##                                                                        ##");
-print("##         Unidad 5 - MySQL, Parte 1                                      ##");
-print("##            * INSERT, UPDATE, DELETE, SELECT                            ##");
-print("##            * FECHAS Y HORAS                                            ##");
-print("##            * %LIKE%                                                    ##");
-print("##            * JOIN                                                      ##");
-print("##                                                                        ##");
-print("############################################################################");
-print("##                                                                        ##");
-print("##                            Fecha  / hora                               ##");
-print("##                                                                        ##");
-print("############################################################################");
-print("https://www.tutorialspoint.com/python/python_date_time.htm")
-print (input("\n		continuar?"));
+https://www.tutorialspoint.com/python/python_date_time.htm
+""")
+nuevo(0,"inicio");
+#################################################################
 print ("""
 Function with Description
 -------------------------
@@ -205,8 +62,8 @@ Returns the current time instant, a floating-point number of seconds since the e
 12      time.tzset()
 Resets the time conversion rules used by the library routines. The environment variable TZ specifies how this is done.
 """)
-print (input("\n		continuar?"));
-limpiar()
+nuevo(0,"inicio");
+#################################################################
 print ("""
 Attribute with Description
 --------------------------
@@ -254,11 +111,12 @@ The inverse of time.gmtime: accepts a time instant in time-tuple form and return
 12      calendar.weekday(year,month,day)
 Returns the weekday code for the given date. Weekday codes are 0 (Monday) to 6 (Sunday); month numbers are 1 (January) to 12 (December).
 """)
-print (input("\n		continuar?"));
-limpiar()
+nuevo(0,"inicio");
+#################################################################
+#Clase_fechas_Ej_001
 import datetime
-# Ej 008_1
-print("Inicio ej008_1");
+
+
 print ("uso de libreria # datetime ")
 fecha = datetime.datetime.now()
 print(f"Fecha - hora              :"+str(fecha))
@@ -308,7 +166,7 @@ print('''	%a  Locale’s abbreviated weekday name.
 	%Z  Time zone name (empty string if the object is naive).    
 	%%  A literal '%' character.''')
 print (input("\n		continuar?"));
-limpiar()
+nuevo(0,"inicio");
 print(f".strftime( %a )			:"+str(fecha.strftime("%a")));
 print(f".strftime( %b )			:"+str(fecha.strftime("%b")));
 print(f".strftime( %c )			:"+str(fecha.strftime("%c")));
@@ -345,26 +203,18 @@ print(f".strftime( %V )			:"+str(fecha.strftime("%V")));
 print(f".strftime( %W )			:"+str(fecha.strftime("%W")));
 print(f".strftime( %X )			:"+str(fecha.strftime("%X")));
 print(f".strftime( %Y )			:"+str(fecha.strftime("%Y")));
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 008_2
-print("Inicio ej008_2 ")
+nuevo(1);
+#################################################################
+#Clase_fechas_Ej_002
 import calendar
 año=int(input("Año :"))
 mes=int(input("Mes (en numeros):"))
 
 calendario = calendar.month(año, mes)
 print(f"Verifique por favor:\n {calendario}")
-
-print (input("Fin ej008_2 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 008_3
-print("Inicio ej008_3 ")
-
-
-
+nuevo(2);
+#################################################################
+#Clase_fechas_Ej_003
 a = datetime.time()
 print("a =", a)
 
@@ -387,18 +237,9 @@ print("c =", c)
 # time(hour, minute, second, microsecond)
 d = datetime.time(11, 34, 56, 234566)
 print("d =", d)
-
-
-
-
-
-
-
-print (input("Fin ej008_3 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 008_4
-print("Inicio ej008_4 ");
+nuevo(3);
+#################################################################
+#Clase_fechas_Ej_004
 now = datetime.datetime.now()
 
 print
@@ -421,15 +262,17 @@ print (now.strftime("%Y-%m-%d %H:%M"));
 print ("Current date and time using isoformat:");
 print (now.isoformat());
 
-print (input("Fin ej008_4 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 008_5
-print("Inicio ej008_5 ")
+nuevo(4);
+#################################################################
+#Clase_fechas_Ej_005
 
 from datetime import date
 from datetime import time
 from datetime import datetime
+
+
+
+
 def main():
 	##DATETIME OBJECTS
 	#Get today's date from datetime class
@@ -445,17 +288,17 @@ def main():
 	print (f"Today is day number %d" % wd)
 	print (f"which is a " + days[wd])
 main()
-print("#########################################################");
+nuevo(5);
+#################################################################
+#Clase_fechas_Ej_006
 from datetime import date
 f_date = date(2014, 7, 2)
 l_date = date(2014, 7, 11)
 delta = l_date - f_date
 print(delta.days)
-print (input("Fin ej008_5 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 008_6
-print("Inicio ej008_6 ")
+nuevo(6);
+#################################################################
+#Clase_fechas_Ej_007
 from datetime import datetime
 
 #datetime(year, month, day)
@@ -466,12 +309,9 @@ print(paso_fecha_a_string)
 paso_fechahora_a_string = datetime(2017, 11, 28, 23, 55, 59, 342380)
 print(paso_fechahora_a_string)
 
-
-print (input("Fin ej008_6 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 008_7
-print("Inicio ej008_7")
+nuevo(7);
+#################################################################
+#Clase_fechas_Ej_008
 from datetime import datetime
 hoy = datetime.now()    # Fecha y hora actual
 
@@ -487,27 +327,24 @@ print(hoy.microsecond)  # microsegundos
 
 print("{}:{}:{}".format(hoy.hour, hoy.minute, hoy.second))
 print("{}/{}/{}".format(hoy.day, hoy.month, hoy.year))
-
-print("#########################################################");
-
+nuevo(8);
+#################################################################
+#Clase_fechas_Ej_009
 from datetime import datetime
 from datetime import time
 hora_inicio = time(18,54,0) # 
 hora_finalizacion = time(18,55,30) # 
 while True:
-    actual = datetime.now()
-    actual = time(actual.hour, actual.minute,actual.second)  # este objeto se puede comparar sin tener en cuenta la fecha
-    if actual > hora_inicio and actual < hora_finalizacion:
-        print( actual )
-        print("#########################################################");
-    else:
-        break
-
-print (input("Fin ej008_7 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 008_8
-print("Inicio ej008_8")
+	actual = datetime.now()
+	actual = time(actual.hour, actual.minute,actual.second)  # este objeto se puede comparar sin tener en cuenta la fecha
+	if actual > hora_inicio and actual < hora_finalizacion:
+		print( actual )
+	else:
+		print("no")
+		break
+nuevo(9);
+#################################################################
+#Clase_fechas_Ej_010
 
 print("""
 Los módulos datetime y calendar amplían las posibilidades del módulo time que provee funciones para manipular expresiones de tiempo.
@@ -550,11 +387,9 @@ print("\tFecha2:", fecha2)
 # Compara fechas
 print("\tFecha1 > Fecha2:", fecha1 > fecha2)  # False
 
-print (input("Fin ej008_8 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 008_9
-print("Inicio ej008_9")
+nuevo(10);
+#################################################################
+#Clase_fechas_Ej_011
 
 # Asigna formato de ejemplo1
 formato1 = "%a %b %d %H:%M:%S %Y"
@@ -583,6 +418,10 @@ print("Para convertir una cadena a objeto datetime")
 
 objeto_datetime = datetime.strptime(cadena1, formato1)
 print("strptime:", fecha1.strftime(formato1))
+
+nuevo(11);
+#################################################################
+#Clase_fechas_Ej_012
 from datetime import datetime,timedelta
 
 
@@ -599,10 +438,9 @@ mañana = hoy + dias_mas  # Suma a fecha actual 1 día
 print("Mañana", mañana)
 diferencia_en_dias = hoy  - ayer # Resta las dos fechas
 
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
-
+nuevo(12);
+#################################################################
+#Clase_fechas_Ej_013
 print("Otros ejemplos de operaciones con otras unidades de tiempo")
 
 hoy_mas_1_millon_segundos = hoy + timedelta(seconds=1000000)
@@ -623,9 +461,9 @@ print("La fecha de hoy más 1 millón de segundos:",
 print("Hora actual:", hora_actual)
 print("Hora actual + 5 minutos:", mas_5m)
 print("Hora actual + 5 horas:", mas_5h)
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(13);
+#################################################################
+#Clase_fechas_Ej_014
 print("Diferencia entre dos fechas (datetime)")
 
 # Asigna datetime de la fecha actual
@@ -642,9 +480,9 @@ print("Entre las 2 fechas hay ",
       "días y ", 
       diferencia.seconds, 
       "seg.")
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(14);
+#################################################################
+#Clase_fechas_Ej_015
 print("Diferencia entre dos fechas en días (datetime y strptime)")
 
 formato_fecha = "%d-%m-%Y"
@@ -656,9 +494,9 @@ diferencia = fecha_final - fecha_inicial
 print("Fecha inicial:", fecha_inicial)
 print("Fecha final:", fecha_final)
 print("Diferencia:", diferencia.days, "días")
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(15);
+#################################################################
+#Clase_fechas_Ej_016
 print("Diferencia de dos fechas en días, introducidas por teclado")
 
 from datetime import datetime
@@ -696,9 +534,9 @@ def main():
 
 if __name__ == '__main__':
  main()
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(16);
+#################################################################
+#Clase_fechas_Ej_017
 print("A partir de una hora se obtiene fracción del día")
 # A partir de una hora introducida por teclado se obtiene
 # fracción del día, teniendo en cuenta que 24 horas = 86400 seg
@@ -724,9 +562,9 @@ while True:
 	except:
 		print('Error en el formato de hora introducido.')
 		print('-> Formato válido: hh:mm:ss  ¡Inténtalo de nuevo!')
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(17);
+#################################################################
+#Clase_fechas_Ej_018
 print("Diferencia de dos fechas (date)")
 hoy = date.today()
 navidad_año_proximo = date(2024, 12, 25)
@@ -753,7 +591,9 @@ for mensaje,valor in zip(tupla_mensajes, tupla_valores):
  print(mensaje,"-->", valor)
  
 print("Día de semana-->", tupla_diassem[tupla_valores[2]-1])
-print (input("		continuar?"));
+nuevo(18,"inicio");
+#################################################################
+
 
 print("Obtener día de la semana por su número ")
 print("La función weekday() devuelve el número de día de la semana a que corresponda la fecha indicada, según los siguientes valores por día:  0-Lunes, 1-Martes, 2-Miércoles, 3-Jueves, 4-Viernes , 5-Sábado y 6-Domingo")
@@ -763,9 +603,9 @@ print(fecha1, "->", dia_semana,"->",
       tupla_diassem[dia_semana])
 
 print("Obtener y contar los días que sean martes entre dos fechas")
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(18);
+#################################################################
+#Clase_fechas_Ej_019
 from datetime import datetime, timedelta
 
 formato = "%d/%m/%Y"
@@ -790,41 +630,40 @@ try:
                 
 except:
 	print('Fecha incorrecta')
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
-print("Obtener día de la semana por su número")
+nuevo(19);
+#################################################################
+#Clase_fechas_Ej_020
 print("La función isoweekday() devuelve el número de día de la semana a que corresponda la fecha indicada, según los siguientes valores por día:  1-Lunes, 2-Martes, 3-Miércoles, 4-Jueves, 5-Viernes, 6-Sábado y 7-Domingo.")
 
 dia_semana = datetime.isoweekday(fecha1)
 print(fecha1, "->", dia_semana,"->", 
 	tupla_diassem[dia_semana-1])
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(20);
+#################################################################
+#Clase_fechas_Ej_021
 print("Dado el ordinal se obtiene la fecha correspondiente")
 print("Si la fecha 01-01-0001 tiene el ordinal 1 entonces...")
 for num in range(1,7):
 	print("El día", 10 ** num , "se corresponde con", date.fromordinal(10 ** num))
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(21);
+#################################################################
+#Clase_fechas_Ej_022
 print("Dada una fecha se obtiene un ordinal (01-01-0001 -> 1)")
 
 fecha3 = datetime(1, 1, 1, 0, 0, 0)
 print("La fecha", fecha3, "tiene el ordinal", date.toordinal(fecha3))
 print("La fecha", fecha1, "tiene el ordinal", date.toordinal(fecha1))
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(22);
+#################################################################
+#Clase_fechas_Ej_023
 print("Obtener una tupla a partir de fecha-hora (datetime)")
 
 tupla_fechahora = fecha1.timetuple()
 for elemento in tupla_fechahora:
 	print(elemento)
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(23);
+#################################################################
+#Clase_fechas_Ej_024
 print("Convertir un ordinal en fecha-hora (fromtimestamp)")
 print("El ordinal 0 se corresponde con la fecha -> 1-1-1970 01:00:00")
 
@@ -833,9 +672,9 @@ ordinales_tiempo = (0, 1, 2, 60, 3600)
 for elemento in ordinales_tiempo:
     print(elemento, "->" , datetime.fromtimestamp(elemento))
 
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(24);
+#################################################################
+#Clase_fechas_Ej_025
 print("Obtener calendario del mes actual (calendar.month)")
 
 año = date.today().year 
@@ -843,27 +682,27 @@ mes = date.today().month
 calendario_mes = calendar.month(año, mes)
 print(calendario_mes)
 
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(25);
+#################################################################
+#Clase_fechas_Ej_026
 print("Obtener calendario del mes actual (calendar.TextCalendar)");
 print("Se establece el lunes como primer día de la semana");
 
 calendario = calendar.TextCalendar(calendar.MONDAY)
 calendario.prmonth(año, mes)
 
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(0,"inicio");
+#################################################################
+
 print("Obtener matriz con calendario de mes actual: (Calendar monthdayscalendar)");
 
 calendario = calendar.Calendar()
 for elemento in calendario.monthdayscalendar(año, mes):
     print(elemento)
 
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(26);
+#################################################################
+#Clase_fechas_Ej_027
 print("Obtener matriz de tuplas con calendario: (Calendar monthdays2calendar)");
 print("El primer valor de cada par es el número de día del mes y el segundo valor se corresponde con el número de día de la semana: 0:lunes, 1:martes, 2:miércoles, etc.");
 
@@ -875,9 +714,9 @@ print("Calendario completo del año 2018");
 print("Día de comienzo: Lunes");
 
 print(calendar.TextCalendar(calendar.MONDAY).formatyear(2018, 2, 1, 1, 2))
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(27);
+#################################################################
+#Clase_fechas_Ej_028
 print("https://steemit.com/spanish/@sethroot/aritmetica-de-fechas-con-python-aprende-a-programar")
 from datetime import datetime,timedelta
 hoy = datetime.now()#fecha actual
@@ -897,9 +736,9 @@ hoy_menos_dias = hoy - dias
 
 print (hoy_menos_dias)
 print (hoy_menos_dias.date())
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(28);
+#################################################################
+#Clase_fechas_Ej_029
 print ("""
 		date          trabaja con Fechas
 		datetime      Manipula fechas con Tiempo
@@ -915,9 +754,9 @@ hoy_mas_meses = fecha + month
 
 print (hoy_menos_meses)
 print (hoy_mas_meses)
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(29);
+#################################################################
+#Clase_fechas_Ej_030
 print ("""
 Con esto estamos sumando 15 meses a la fecha 2017,04,02 con lo que nos imprime 2016-01-02 00:00:00 
 y 2018-07-02 00:00:0 la primera para la resta de 15 meses y la segunda para la suma de 15 meses, 
@@ -929,9 +768,9 @@ hoy_menos_meses = fecha - years
 hoy_mas_meses = fecha + years
 print (hoy_menos_meses)
 print (hoy_mas_meses)
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(30);
+#################################################################
+#Clase_fechas_Ej_031
 print ("""
 Podemos pasarle .date  al final de las variables para obtener solo las fechas:
 """)
@@ -953,6 +792,6 @@ hoy_mas_meses = fecha + years
 
 print (hoy_menos_meses.date())
 print (hoy_mas_meses.date())
-print (input("		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(31,"fin");
+#################################################################
+

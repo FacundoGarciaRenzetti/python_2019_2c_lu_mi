@@ -1,298 +1,156 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# AGT
-# Copyright 2019 Ariel H Garcia Traba <cursos.arT@gmail.com>
-def limpiar():
-    import os
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
-        
-"""
+from Estructura import *
+nuevo(0,"inicio");
+#################################################################
+def Echos():
+	#Con tab colocaremos aqui las precticas hechas
+	pass
+print("""
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗                                                                      ░ ▒ ▓ ┌┐┤│├└┘┴┬─┼╔╗╠╬╣║╚╝╩╦═¤
-║TEMARIO:                                                                                                                ║
-║--------                                                                                                                ║
-║Unidad 1 - Introducción                                                                                                 ║
-║● ¿Qué es Python?                                                                                                       ║
-║● Ventajas y desventajas                                                                                                ║
-║● Ecosistema Python y Comunidad –Librerías extendidas                                                                   ║
-║● Descarga –Opensource                                                                                                  ║
-║● Instalación, configuración y hardware necesario                                                                       ║
-║● Errores sintácticos y lógicos, localización en pantalla y correcciones                                                ║
-║● Importancia del versionado                                                                                            ║
-║● GIT Colaborativo –Pair Programming                                                                                    ║
-║	o Introducción a GIT                                                                                                 ║
-║	o Creando un repositorio, clonar, branches                                                                           ║
-║	oBorrar, guardar (STASH), requperar (POP)                                                                            ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 2 – Software                                                                                                     ║
-║Características de Python                                                                                               ║
-║● Software libre                                                                                                        ║
-║● Alto nivel                                                                                                            ║
-║● Multiparadigma                                                                                                        ║
-║● Portable                                                                                                              ║
-║● Programación Secuencial y Orientada a Objetos                                                                         ║
-║● Multiplataforma                                                                                                       ║
-║● Interpretado                                                                                                          ║
-║● Tipado dinámico                                                                                                       ║
-║● Estructura (TAB)                                                                                                      ║
 ║                                                                                                                        ║
-║Entorno de Desarrollo Intérprete – IDEs                                                                                 ║
-║● Elección según el propósito del trabajo:                                                                              ║
-║	PyCharm, PyDev, Atom, Spyder, PyScripter, Eclipse, IPython.                                                          ║
-║● Entornos especiales: Anaconda (Data Science Platform),  Jupyter (Notebooks).                                          ║
-║● Consola, pantalla gráfica y entorno                                                                                   ║
-║● Salida de datos por pantalla                                                                                          ║
-║	o Sentencias: print ()                                                                                               ║
-║● Ingreso de datos por teclado                                                                                          ║
-║● Sentencias: input ()                                                                                                  ║
+║                                                                                                                        ║
+║              Unidad 5 - MySQL, Parte 1                                                                                 ║
+║                 * INSERT, UPDATE, DELETE, SELECT                                                                       ║
+║                 * FECHAS Y HORAS                                                                                       ║
+║                 * %LIKE%                                                                                               ║
+║                 * JOIN                                                                                                 ║
+║                                                                                                                        ║
 ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 3 - Estructura y primeros Trabajos con datos                                                                     ║
-║Variables, Constantes                                                                                                   ║
-║● Flujo de datos, estructura, linealidad, condicionales, bucles                                                         ║
-║● Estructuras condicionales simples, compuestas y anidadas                                                              ║
-║● Sentencias: If , elif, else, :                                                                                        ║
-║● Estructuras repetitivas                                                                                               ║
-║● Sentencias:  for, range, while, else :                                                                                ║
-║● Estructuras modificaciones                                                                                            ║
-║● Sentencias:  break, continue, pass                                                                                    ║
-║● Operadores:                                                                                                           ║
-║● Comparación: ==, <, <=, >, >=, !=                                                                                     ║
-║● Lógicos:  and, not, or                                                                                                ║
-║● Aritméticos: +,-*, **, /, //, %, (ver librería math)                                                                  ║
-║● Asignación: =, += , - = , *=  , ** , /= , //= , %=                                                                    ║
-║● Especiales: is, is not,  in, not in                                                                                   ║
-║Espacios, nombres, ámbitos, objetos                                                                                     ║
-║● Variables y constantes - Tipos                                                                                        ║
-║● Procesamiento de cadenas                                                                                              ║
-║Listas [variables]                                                                                                      ║
-║● Índices                                                                                                               ║
-║● Recorrer listas                                                                                                       ║
-║● Sentencias:  append(),  clear(), copy(), count(), extend(), index(), insert(), pop(), remove(), reverse(), sort(), etc║
-║Tuplas (Constantes)                                                                                                     ║
-║● Índices                                                                                                               ║
-║● Recorrer Tuplas                                                                                                       ║
-║● Sentencias:  index(), count(), etc.                                                                                   ║
-║Diccionarios {clave:valor asociado}                                                                                     ║
-║● Funcionamiento de diccionarios                                                                                        ║
-║● Sentencias:  clear(), copy(), fromkeys(), get(), items(), keys(), pop(),                                              ║
-║● popitem(), reverse(), setdefault(), update(), values(), etc.                                                          ║
-║● Sets y otros                                                                                                          ║
+║                                                                                                                        ║
+║                           Python List/Array Methods                                                                    ║
+║                          ---------------------------                                                                   ║
+║                                                                                                                        ║
+║       Operator     Description                                                                                         ║
+║                                                                                                                        ║
+║       Button       The Button widget is used to display buttons in                                                     ║
+║                    your application.                                                                                   ║
+║              Option   Description                                                                                      ║
+║              activebackground-                                                                                         ║
+║                 Background color when the button is under the cursor                                                   ║
+║              activeforeground-                                                                                         ║
+║                 Foreground color when the button is under the cursor                                                   ║
+║              bd     -                                                                                                  ║
+║                 Border width in pixels. Default is 2.                                                                  ║
+║              bg     -                                                                                                  ║
+║                 Normal background color.                                                                               ║
+║              command-                                                                                                  ║
+║                 Function or method to be called when the button is clicked.                                            ║
+║              fg     -                                                                                                  ║
+║                 Normal foreground (text) color.                                                                        ║
+║              font   -                                                                                                  ║
+║                 Text font to be used for the button's label.                                                           ║
+║              height -                                                                                                  ║
+║                 Height of the button in text lines (for textual buttons)                                               ║
+║                 or pixels (for images).                                                                                ║
+║              highlightcolor-                                                                                           ║
+║                 The color of the focus highlight when the widget has                                                   ║
+║                 focus.                                                                                                 ║
+║              image  -                                                                                                  ║
+║                 Image to be displayed on the button (instead of text).                                                 ║
+║              justify-                                                                                                  ║
+║                 How to show multiple text lines: LEFT to left-justify each                                             ║
+║                 line; CENTER to center them; or RIGHT to right-justify.                                                ║
+║              padx   -                                                                                                  ║
+║                 Additional padding left and right of the text.                                                         ║
+║              pady   -                                                                                                  ║
+║                 Additional padding above and below the text.                                                           ║
+║              relief -                                                                                                  ║
+║                 Relief specifies the type of the border. Some of the values                                            ║
+║                                                                                                                        ║
+║                 are SUNKEN, RAISED, GROOVE, and RIDGE.                                                                 ║
+║              state  -                                                                                                  ║
+║                 Set this option to DISABLED to gray out the button and make                                            ║
+║                 it unresponsive. Has the value ACTIVE when the mouse                                                   ║
+║                 is over it. Default is NORMAL.                                                                         ║
+║              underline-                                                                                                ║
+║                 Default is -1, meaning that no character of the text on                                                ║
+║                 the button will be underlined. If nonnegative,                                                         ║
+║                 the corresponding text character will be underlined.                                                   ║
+║              width  -                                                                                                  ║
+║                 Width of the button in letters (if displaying text)                                                    ║
+║                 or pixels (if displaying an image).                                                                    ║
+║              wraplength-                                                                                               ║
+║                 If this value is set to a positive number, the text                                                    ║
+║                 lines will be wrapped to fit within this length.                                                       ║
+║                                                                                                                        ║
+║              Medthod-     Description                                                                                  ║
+║              flash() -                                                                                                 ║
+║                 Causes the button to flash several times between active                                                ║
+║                 and normal colors. Leaves the button in the state it was                                               ║
+║                 in originally. Ignored if the button is disabled.                                                      ║
+║              invoke()-                                                                                                 ║
+║                 Calls the button's callback, and returns what that function                                            ║
+║                 returns. Has no effect if the button is disabled or there                                              ║
+║                 is no callback.                                                                                        ║
 ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 4 – Funciones                                                                                                    ║
-║● Iterar: ejecución repetida de un conjunto de sentencias                                                               ║
-║Sentencias:  def (): return                                                                                             ║
-║● Parámetros de entrada de datos                                                                                        ║
-║● Retorno de datos a la salida                                                                                          ║
-║● Return de listas                                                                                                      ║
-║● Parámetros con valor por defecto (=val;*;**)                                                                          ║
+║                                                                                                                        ║
+║       Canvas       The Canvas widget is used to draw shapes, such as lines,                                            ║
+║                    ovals, polygons and rectangles, in your application.                                                ║
+║                                                                                                                        ║
+║       Checkbutton  The Checkbutton widget is used to display a number of                                               ║
+║                    options as checkboxes. The user can select multiple                                                 ║
+║                    options at a time.                                                                                  ║
+║                                                                                                                        ║
+║       Entry        The Label widget is used to provide a single-line caption                                           ║
+║                    field for accepting values from a user.                                                             ║
+║                                                                                                                        ║
+║       Frame        The Frame widget is used as a container widget to                                                   ║
+║                    organize other widgets.                                                                             ║
+║                                                                                                                        ║
+║       Label        Returns the index of the first element with the specified                                           ║
+║                    for other widgets. It can also contain images.                                                      ║
+║                                                                                                                        ║
+║       Listbox      The Listbox widget is used to provide a list of options                                             ║
+║                    to a user.                                                                                          ║
+║                                                                                                                        ║
+║       Menubutton   The Menubutton widget is used to display menus in your                                              ║
+║                    application.                                                                                        ║
+║                                                                                                                        ║
+║       Menu         The Menu widget is used to provide various commands to                                              ║
+║                    a user. These commands are contained inside Menubutton.                                             ║
+║                                                                                                                        ║
+║       Message      The Message widget is used to display multiline text                                                ║
+║                    fields for accepting values from a user.                                                            ║
+║                                                                                                                        ║
+║       Radiobutton  The Radiobutton widget is used to display a number of                                               ║
+║                    options as radio buttons. The user can select only one                                              ║ 
+║                    option at a time.                                                                                   ║
+║                                                                                                                        ║
+║       Scale        The Scale widget is used to provide a slider widget.                                                ║
+║                                                                                                                        ║
+║       Scrollbar    The Scrollbar widget is used to add scrolling capability                                            ║
+║                     to various widgets, such as list boxes.                                                            ║
+║                                                                                                                        ║
+║       Text         The Text widget is used to display text in multiple lines                                           ║
+║                                                                                                                        ║
+║       Toplevel     The Toplevel widget is used to provide a separate window                                            ║
+║                     container.                                                                                         ║
+║                                                                                                                        ║
+║       Spinbox      The Spinbox widget is a variant of the standard Tkinter                                             ║
+║                    Entry widget, which can be used to select from a fixed                                              ║
+║                    number of values.                                                                                   ║
+║                                                                                                                        ║
+║       PanedWindow  A PanedWindow is a container widget that may contain any                                            ║
+║                     number of panes, arranged horizontally or vertically.                                              ║
+║                                                                                                                        ║
+║       LabelFrame   A labelframe is a simple container widget. Its primary                                              ║
+║                     purpose is to act as a spacer or container for complex                                             ║
+║                     window layouts.                                                                                    ║
+║                                                                                                                        ║
+║       tkMessageBox This module is used to display message boxes in you                                                 ║
+║                     applications.                                                                                      ║
+║                                                                                                                        ║
 ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 5 – Módulos y Librerías                                                                                          ║
-║● Uso de métodos y funciones de un archivo externo Sentencias: Import, from                                             ║
-║● Generar un modulo                                                                                                     ║
-║● Uso de librerías                                                                                                      ║
-║● Generar archivos, leerlos, escribirlos (TXT - plano/ Binario) JSON (Javascript) Pickle (Python)                       ║
-║● Instalación de librerías, ecosistema,                                                                                 ║
-║Métodos: pip, conda,                                                                                                    ║
-║Download e instalación MSI, Linuc, etc                                                                                  ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 6 – Clases Sistema para empaquetar atributos de datos y funcionalidad métodos para instanciar                    ║
-║Sentencias: class ():, self                                                                                             ║
-║● Objetos clases                                                                                                        ║
-║● Objetos instancias                                                                                                    ║
-║● Objetos métodos                                                                                                       ║
-║● Herencias, herencias múltiples                                                                                        ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 7 – Entorno visual - WEB Django Pantallas graficas - Libreria: tkinter, numpy y matplotli                        ║
-║● Pantallas, Frames, Labels, bottons,etc                                                                                ║
-║● Ubicación de elementos, colores, formatos, tamaños, etc.                                                              ║
-║● Ingreso de daros desde pantalla (get)                                                                                 ║
-║● Salida de datos por pantalla                                                                                          ║
-║● Acciones de botones para llamar a funciones                                                                           ║
-║● Graficas de funciones matematicas y otros datos.( series, tortas, 3d, etc.)                                           ║
-║● Python y “Django” e la web framework                                                                                  ║
-║Ejemplos de uso intensivo de Django (Instagram, Pinterest, Mozilla, National Geografic, etc.)                           ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 8 – Bases de Datos locales y en la nube                                                                          ║
-║Tipo: SQL (Mysql) y NoSQL (Mongo)                                                                                       ║
-║Librería: mysql.connector                                                                                               ║
-║Librería: pymongo                                                                                                       ║
-║● Python y “Big Data”                                                                                                   ║
-║● Conexión                                                                                                              ║
-║● cursor(), .execute(), .close                                                                                          ║
-║● Crear Bases, tablas, columnas                                                                                         ║
-║● Tipos de datos, caracteres, numéricos, fecha - hora                                                                   ║
-║● Buscar, insertar, actualizar, borrar, seleccionar, elementos desde y hacia una base de datos                          ║
-║● Where, from. %like%                                                                                                   ║
-║● Firebase, Google Cloud IoT -u otro hub para OIT AWS (Amazon) Azure (MSoft)                                            ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 9 – Fechas, Horas                                                                                                ║
-║● Modulo time, datetime                                                                                                 ║
-║● Manejo de fechas y horas                                                                                              ║
-║● Uso en aplicaciones web, base de datos, multiplataforma, etc.                                                         ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 10 – Internet Of Things – IOT                                                                                    ║
-║● Programación de eventos - Timed Event                                                                                 ║
-║Librería:                                                                                                               ║
-║Scheduler                                                                                                               ║
-║● Módulo sched / Scheduler                                                                                              ║
-║● Declaración de programadores                                                                                          ║
-║● Llamado a funciones como eventos                                                                                      ║
-║● Programar eventos y poner en marcha el programador                                                                    ║
-║● Programación de eventos considerando prioridades                                                                      ║
-║● Cancelación de eventos                                                                                                ║
-║● Python y Internet Of Things – IOT                                                                                     ║
-║● Python y MicroControladores (un matrimonio perfecto)                                                                  ║
-║	Librería:	Zerynth                                                                                                  ║
-║	Ejemplos de uso intensivo de Raspberry Pi y NodeMCU (ESP8266)                                                        ║
-║IOT Con BBDD, Python y Android                                                                                          ║
-║● Python y Amazon - AWS IoT                                                                                             ║
-║● Protocolo MQTT                                                                                                        ║
+║                                                                                                                        ║
+║              Unidad 8,0                                                                                                ║
+║                                                                                                                        ║
 ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-"""
-print("############################################################################");
-print("##                                                                        ##");
-print("##         Unidad 5 - MySQL, Parte 1                                      ##");
-print("##            * INSERT, UPDATE, DELETE, SELECT                            ##");
-print("##            * FECHAS Y HORAS                                            ##");
-print("##            * %LIKE%                                                    ##");
-print("##            * JOIN                                                      ##");
-print("##                                                                        ##");
-print("############################################################################");
-print("##                                                                        ##");
-print("##                      Python List/Array Methods                         ##");
-print("##                     ---------------------------                        ##");
-print("##                                                                        ##");
-print("##  Operator     Description                                              ##");
-print("##                                                                        ##");
-print("##  Button       The Button widget is used to display buttons in          ##");
-print("##               your application.                                        ##");
-print("##         Option   Description                                           ##");
-print("##         activebackground-                                              ##");
-print("##            Background color when the button is under the cursor        ##");
-print("##         activeforeground-                                              ##");
-print("##            Foreground color when the button is under the cursor        ##");
-print("##         bd     -                                                       ##");
-print("##            Border width in pixels. Default is 2.                       ##");
-print("##         bg     -                                                       ##");
-print("##            Normal background color.                                    ##");
-print("##         command-                                                       ##");
-print("##            Function or method to be called when the button is clicked. ##");
-print("##         fg     -                                                       ##");
-print("##            Normal foreground (text) color.                             ##");
-print("##         font   -                                                       ##");
-print("##            Text font to be used for the button's label.                ##");
-print("##         height -                                                       ##");
-print("##            Height of the button in text lines (for textual buttons)    ##");
-print("##            or pixels (for images).                                     ##");
-print("##         highlightcolor-                                                ##");
-print("##            The color of the focus highlight when the widget has        ##");
-print("##            focus.                                                      ##");
-print("##         image  -                                                       ##");
-print("##            Image to be displayed on the button (instead of text).      ##");
-print("##         justify-                                                       ##");
-print("##            How to show multiple text lines: LEFT to left-justify each  ##");
-print("##            line; CENTER to center them; or RIGHT to right-justify.     ##");
-print("##         padx   -                                                       ##");
-print("##            Additional padding left and right of the text.              ##");
-print("##         pady   -                                                       ##");
-print("##            Additional padding above and below the text.                ##");
-print("##         relief -                                                       ##");
-print("##            Relief specifies the type of the border. Some of the values ##");
-print("##                                                                        ##");
-print("##            are SUNKEN, RAISED, GROOVE, and RIDGE.                      ##");
-print("##         state  -                                                       ##");
-print("##            Set this option to DISABLED to gray out the button and make ##");
-print("##            it unresponsive. Has the value ACTIVE when the mouse        ##");
-print("##            is over it. Default is NORMAL.                              ##");
-print("##         underline-                                                     ##");
-print("##            Default is -1, meaning that no character of the text on     ##");
-print("##            the button will be underlined. If nonnegative,              ##");
-print("##            the corresponding text character will be underlined.        ##");
-print("##         width  -                                                       ##");
-print("##            Width of the button in letters (if displaying text)         ##");
-print("##            or pixels (if displaying an image).                         ##");
-print("##         wraplength-                                                    ##");
-print("##            If this value is set to a positive number, the text         ##");
-print("##            lines will be wrapped to fit within this length.            ##");
-print("##                                                                        ##");
-print("##         Medthod-     Description                                       ##");
-print("##         flash() -                                                      ##");
-print("##            Causes the button to flash several times between active     ##");
-print("##            and normal colors. Leaves the button in the state it was    ##");
-print("##            in originally. Ignored if the button is disabled.           ##");
-print("##         invoke()-                                                      ##");
-print("##            Calls the button's callback, and returns what that function ##");
-print("##            returns. Has no effect if the button is disabled or there   ##");
-print("##            is no callback.                                             ##");
-print("##  --------------------------------------------------------------------  ##");
-print("##                                                                        ##");
-print("##  Canvas       The Canvas widget is used to draw shapes, such as lines, ##");
-print("##               ovals, polygons and rectangles, in your application.     ##");
-print("##                                                                        ##");
-print("##  Checkbutton  The Checkbutton widget is used to display a number of    ##");
-print("##               options as checkboxes. The user can select multiple      ##");
-print("##               options at a time.                                       ##");
-print("##                                                                        ##");
-print("##  Entry        The Label widget is used to provide a single-line caption##");
-print("##               field for accepting values from a user.                  ##");
-print("##                                                                        ##");
-print("##  Frame        The Frame widget is used as a container widget to        ##");
-print("##               organize other widgets.                                  ##");
-print("##                                                                        ##");
-print("##  Label        Returns the index of the first element with the specified##");
-print("##               for other widgets. It can also contain images.           ##");
-print("##                                                                        ##");
-print("##  Listbox      The Listbox widget is used to provide a list of options  ##");
-print("##               to a user.                                               ##");
-print("##                                                                        ##");
-print("##  Menubutton   The Menubutton widget is used to display menus in your   ##");
-print("##               application.                                             ##");
-print("##                                                                        ##");
-print("##  Menu         The Menu widget is used to provide various commands to   ##");
-print("##               a user. These commands are contained inside Menubutton.  ##");
-print("##                                                                        ##");
-print("##  Message      The Message widget is used to display multiline text     ##");
-print("##               fields for accepting values from a user.                 ##");
-print("##                                                                        ##");
-print("##  Radiobutton  The Radiobutton widget is used to display a number of    ##");
-print("##               options as radio buttons. The user can select only one   ##"); 
-print("##               option at a time.                                        ##");
-print("##                                                                        ##");
-print("##  Scale        The Scale widget is used to provide a slider widget.     ##");
-print("##                                                                        ##");
-print("##  Scrollbar    The Scrollbar widget is used to add scrolling capability ##");
-print("##                to various widgets, such as list boxes.                 ##");
-print("##                                                                        ##");
-print("##  Text         The Text widget is used to display text in multiple lines##");
-print("##                                                                        ##");
-print("##  Toplevel     The Toplevel widget is used to provide a separate window ##");
-print("##                container.                                              ##");
-print("##                                                                        ##");
-print("##  Spinbox      The Spinbox widget is a variant of the standard Tkinter  ##");
-print("##               Entry widget, which can be used to select from a fixed   ##");
-print("##               number of values.                                        ##");
-print("##                                                                        ##");
-print("##  PanedWindow  A PanedWindow is a container widget that may contain any ##");
-print("##                number of panes, arranged horizontally or vertically.   ##");
-print("##                                                                        ##");
-print("##  LabelFrame   A labelframe is a simple container widget. Its primary   ##");
-print("##                purpose is to act as a spacer or container for complex  ##");
-print("##                window layouts.                                         ##");
-print("##                                                                        ##");
-print("##  tkMessageBox This module is used to display message boxes in you      ##");
-print("##                applications.                                           ##");
-print("##                                                                        ##");
-print("############################################################################");
-print("##                                                                        ##");
-print("##         Unidad 8,0                                                     ##");
-print("##                                                                        ##");
-print("############################################################################");
-print ("https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_tutorials.html")
-print ("https://www.youtube.com/watch?v=CppgV8inf7g&pbjreload=10")
-print("#########################################################")
-print("Inicio ej 012_1 -  ")
+https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_tutorials.html
+https://www.youtube.com/watch?v=CppgV8inf7g&pbjreload=10
+""");
+nuevo(0,"inicio");
+#################################################################
+#Clase_P_graf_01
+
 from tkinter import *
 print ("https://python-para-impacientes.blogspot.com/2015/12/tkinter-interfaces-graficas-en-python-i.html")
 print ("http://pharalax.com/blog/python-desarrollo-de-interfaces-graficas-con-tkinter-labelsbuttonsentrys/")
@@ -316,11 +174,9 @@ def iniciar_pantalla_raiz():
 var = input ("inicio pantalla grafica '1'(S/N)")
 if var.upper() =="S":
 	iniciar_pantalla_raiz()
-print (input("Fin ej 012_1 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 000_2
-print("Inicio ej 0012_2");
+nuevo(1);
+#################################################################
+#Clase_P_graf_02
 from tkinter import *    # Carga módulo tk (widgets estándar)
 from tkinter import ttk  # Carga ttk (para widgets nuevos 8.5+)
 def iniciar2_pantalla_raiz():
@@ -364,11 +220,9 @@ def iniciar2_pantalla_raiz():
 var = input ("inicio pantalla grafica '2'(S/N)")
 if var.upper() =="S":
 	iniciar2_pantalla_raiz()
-print (input("ej 012_2        continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 012_3
-print("Inicio ej 012_3");
+nuevo(2);
+#################################################################
+#Clase_P_graf_03
 from tkinter import *    # Carga módulo tk (widgets estándar)
 from tkinter import ttk  # Carga ttk (para widgets nuevos 8.5+)
 def iniciar3_pantalla_raiz():
@@ -448,11 +302,9 @@ def iniciar3_pantalla_raiz():
 var = input ("inicio pantalla grafica '3'(S/N)")
 if var.upper() =="S":
 	iniciar3_pantalla_raiz()
-print (input("ej 012_3        continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 012_4
-print("Inicio ej 012_4");
+nuevo(3);
+#################################################################
+#Clase_P_graf_04
 from tkinter import *    # Carga módulo tk (widgets estándar)
 def iniciar4_pantalla_raiz():
 	pantalla_raiz=Tk()
@@ -471,11 +323,9 @@ var = input ("inicio pantalla grafica '4'(S/N)")
 if var.upper() =="S":
 	etiquieta= input ("ingrese su nombre:")
 	iniciar4_pantalla_raiz()
-print (input("ej 012-4        continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 012_5
-print("Inicio ej 012_5");
+nuevo(4);
+#################################################################
+#Clase_P_graf_05
 from tkinter import *
 from tkinter import ttk
 
@@ -530,11 +380,9 @@ if __name__ == '__main__':
 		iniciar5_pantalla_raiz()
 
 
-print (input("ej 012_5        continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 012_6
-print("Inicio ej 012_6");
+nuevo(5);
+#################################################################
+#Clase_P_graf_06
 import time
 import tkinter
 
@@ -557,15 +405,12 @@ def iniciar6_pantalla_raiz():
 var = input ("inicio pantalla grafica '6'(S/N)")
 if var.upper() =="S":
 	iniciar6_pantalla_raiz()
-print (input("ej 012-6        continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 012_7
-print("Inicio ej 012_7");
+nuevo(6);
+#################################################################
+#Clase_P_graf_07
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
-""" 
 class iniciar7_pantalla_raiz( Frame ):
     def __init__( self ):
         tk.Frame.__init__(self)
@@ -582,15 +427,15 @@ class iniciar7_pantalla_raiz( Frame ):
         self.destroy()
         return (0)
 class funcion_2(Frame): 
-    def __init__(self):
-        new =tk.Frame.__init__(self)
-        new = Toplevel(self)
-        new.title("Agrego mas pantallas")
-        new.button = tk.Button(  text = "Cierro", width = 25,command=lambda:windows_cerrar )
-        new.button.pack()
+	def __init__(self):
+		new =tk.Frame.__init__(self)
+		new = Toplevel(self)
+		new.title("Agrego mas pantallas")
+		new.button = tk.Button(  text = "Cierro", width = 25,command=lambda:windows_cerrar )
+		new.button.pack()
 	def windows_cerrar(self):
 		self.destroy()
-        return (0)
+		return (0)
  
 def main():
 	var = input ("inicio pantalla grafica '7'(S/N)")
@@ -598,12 +443,9 @@ def main():
 		iniciar7_pantalla_raiz().mainloop()
 if __name__ == '__main__':
     main()
-print (input("ej 012-7        continuar?"));
-       """
-limpiar();
-print("#########################################################");
-# Ej 012_8
-print("Inicio ej 012_8");
+nuevo(7);
+#################################################################
+#Clase_P_graf_08
 from tkinter import *
 from tkinter import messagebox
 def iniciar8_pantalla_raiz():
@@ -617,11 +459,9 @@ def iniciar8_pantalla_raiz():
 	pantalla_raiz.mainloop()
 var = input ("inicio pantalla grafica '8'(S/N)")
 if var.upper() =="S":iniciar8_pantalla_raiz()
-print (input("ej 012-8        continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 012_9
-print("Inicio ej 012_9");
+nuevo(8);
+#################################################################
+#Clase_P_graf_09
 from tkinter import *
 from tkinter import messagebox
 def iniciar9_pantalla_raiz():
@@ -638,11 +478,9 @@ def iniciar9_pantalla_raiz():
 	pantalla_raiz.mainloop()
 var = input ("inicio pantalla grafica '9'(S/N)")
 if var.upper() =="S":iniciar9_pantalla_raiz()
-print (input("ej 012-9        continuar?"));
-limpiar();
-print("#########################################################")
-# Ej 012_10
-print("Inicio ej 012_10");
+nuevo(9);
+#################################################################
+#Clase_P_graf_010
 from tkinter import *
 from tkinter import messagebox
 def iniciar10_pantalla_raiz():
@@ -663,11 +501,9 @@ def iniciar10_pantalla_raiz():
 	pantalla_raiz.mainloop()
 var = input ("inicio pantalla grafica '10'(S/N)")
 if var.upper() =="S":iniciar10_pantalla_raiz()
-print (input("ej 012-10        continuar?"));
-limpiar();
-print("#########################################################")
-# Ej 012_11
-print("Inicio ej 012_11");
+nuevo(10);
+#################################################################
+#Clase_P_graf_011;
 from tkinter import *
 from tkinter import messagebox
 def iniciar11_pantalla_raiz():
@@ -692,11 +528,9 @@ def iniciar11_pantalla_raiz():
 	pantalla_raiz.mainloop()
 var = input ("inicio pantalla grafica '11'(S/N)")
 if var.upper() =="S":iniciar11_pantalla_raiz()
-print (input("ej 012-11        continuar?"));
-limpiar();
-print("#########################################################")
-# Ej 012_12
-print("Inicio ej 012_12");
+nuevo(11);
+#################################################################
+#Clase_P_graf_012
 from tkinter import *
 from tkinter import messagebox
 def iniciar12_pantalla_raiz():
@@ -718,11 +552,9 @@ def iniciar12_pantalla_raiz():
 	pantalla_raiz.mainloop()
 var = input ("inicio pantalla grafica '12'(S/N)")
 if var.upper() =="S":iniciar12_pantalla_raiz()
-print (input("ej 012-12        continuar?"));
-limpiar();
-print("#########################################################")
-# Ej 013_13
-print("Inicio ej 013_13");
+nuevo(12);
+#################################################################
+#Clase_P_graf_013
 from tkinter import *
 from tkinter import messagebox
 def iniciar13_pantalla_raiz():
@@ -747,11 +579,9 @@ def iniciar13_pantalla_raiz():
 	pantalla_raiz.mainloop()
 var = input ("inicio pantalla grafica '13'(S/N)")
 if var.upper() =="S":iniciar13_pantalla_raiz()
-print (input("ej 013-13        continuar?"));
-limpiar();
-print("#########################################################")
-# Ej 014_14
-print("Inicio ej 014_14");
+nuevo(13);
+#################################################################
+#Clase_P_graf_014
 from tkinter import *
 from tkinter import messagebox
 def iniciar14_pantalla_raiz():
@@ -793,9 +623,9 @@ def iniciar14_pantalla_raiz():
 	pantalla_raiz.mainloop()
 var = input ("inicio pantalla grafica '14'(S/N)")
 if var.upper() =="S":iniciar14_pantalla_raiz()
-print (input("ej 014-14        continuar?"));
-limpiar();
-print("#########################################################")
+nuevo(14);
+#################################################################
+#Clase_P_graf_015
 
 from tkinter import *
 
@@ -822,8 +652,7 @@ if var.upper() =="S":
 	root.wm_title("Tkinter")
 	root.geometry("400x300")
 	root.mainloop()
-print (input("ej 014-16        continuar?"));
-limpiar();
-print("#########################################################")
+nuevo(15,"fin");
+#################################################################
 print("https://python-para-impacientes.blogspot.com/2015/12/tkinter-interfaces-graficas-en-python-i.html")
 print("https://python-para-impacientes.blogspot.com/2015/12/tkinter-disenando-frame_pantalla_raizs-graficas.html")

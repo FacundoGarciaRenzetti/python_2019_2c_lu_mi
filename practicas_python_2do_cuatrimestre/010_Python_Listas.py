@@ -1,197 +1,55 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# AGT
-# Copyright 2019 Ariel H Garcia Traba <cursos.arT@gmail.com>
-def limpiar():
-    import os
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
-        
-"""
-╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗                                                                      ░ ▒ ▓ ┌┐┤│├└┘┴┬─┼╔╗╠╬╣║╚╝╩╦═¤
-║TEMARIO:                                                                                                                ║
-║--------                                                                                                                ║
-║Unidad 1 - Introducción                                                                                                 ║
-║● ¿Qué es Python?                                                                                                       ║
-║● Ventajas y desventajas                                                                                                ║
-║● Ecosistema Python y Comunidad –Librerías extendidas                                                                   ║
-║● Descarga –Opensource                                                                                                  ║
-║● Instalación, configuración y hardware necesario                                                                       ║
-║● Errores sintácticos y lógicos, localización en pantalla y correcciones                                                ║
-║● Importancia del versionado                                                                                            ║
-║● GIT Colaborativo –Pair Programming                                                                                    ║
-║	o Introducción a GIT                                                                                                 ║
-║	o Creando un repositorio, clonar, branches                                                                           ║
-║	oBorrar, guardar (STASH), requperar (POP)                                                                            ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 2 – Software                                                                                                     ║
-║Características de Python                                                                                               ║
-║● Software libre                                                                                                        ║
-║● Alto nivel                                                                                                            ║
-║● Multiparadigma                                                                                                        ║
-║● Portable                                                                                                              ║
-║● Programación Secuencial y Orientada a Objetos                                                                         ║
-║● Multiplataforma                                                                                                       ║
-║● Interpretado                                                                                                          ║
-║● Tipado dinámico                                                                                                       ║
-║● Estructura (TAB)                                                                                                      ║
+from Estructura import *
+nuevo(0,"inicio");
+#################################################################
+def Echos():
+	#Con tab colocaremos aqui las precticas hechas
+	pass
+print("""
+╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                        ║
-║Entorno de Desarrollo Intérprete – IDEs                                                                                 ║
-║● Elección según el propósito del trabajo:                                                                              ║
-║	PyCharm, PyDev, Atom, Spyder, PyScripter, Eclipse, IPython.                                                          ║
-║● Entornos especiales: Anaconda (Data Science Platform),  Jupyter (Notebooks).                                          ║
-║● Consola, pantalla gráfica y entorno                                                                                   ║
-║● Salida de datos por pantalla                                                                                          ║
-║	o Sentencias: print ()                                                                                               ║
-║● Ingreso de datos por teclado                                                                                          ║
-║● Sentencias: input ()                                                                                                  ║
+║                                  Unidad 4 - Listas, Tuplas y Diccionarios                                              ║
+║              Listas                                                                                                    ║
+║                 * Índices                                                                                              ║
+║                 * Recorrer listas                                                                                      ║
+║              Tuplas                                                                                                    ║
+║                 * Índices                                                                                              ║
+║                 * Recorrer Tuplas                                                                                      ║
+║              Diccionarios                                                                                              ║
+║                 * Funcionamiento de diccionarios                                                                       ║
+║                 * Estructuras tipo JSON                                                                                ║
+║                                                                                                                        ║
 ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 3 - Estructura y primeros Trabajos con datos                                                                     ║
-║Variables, Constantes                                                                                                   ║
-║● Flujo de datos, estructura, linealidad, condicionales, bucles                                                         ║
-║● Estructuras condicionales simples, compuestas y anidadas                                                              ║
-║● Sentencias: If , elif, else, :                                                                                        ║
-║● Estructuras repetitivas                                                                                               ║
-║● Sentencias:  for, range, while, else :                                                                                ║
-║● Estructuras modificaciones                                                                                            ║
-║● Sentencias:  break, continue, pass                                                                                    ║
-║● Operadores:                                                                                                           ║
-║● Comparación: ==, <, <=, >, >=, !=                                                                                     ║
-║● Lógicos:  and, not, or                                                                                                ║
-║● Aritméticos: +,-*, **, /, //, %, (ver librería math)                                                                  ║
-║● Asignación: =, += , - = , *=  , ** , /= , //= , %=                                                                    ║
-║● Especiales: is, is not,  in, not in                                                                                   ║
-║Espacios, nombres, ámbitos, objetos                                                                                     ║
-║● Variables y constantes - Tipos                                                                                        ║
-║● Procesamiento de cadenas                                                                                              ║
-║Listas [variables]                                                                                                      ║
-║● Índices                                                                                                               ║
-║● Recorrer listas                                                                                                       ║
-║● Sentencias:  append(),  clear(), copy(), count(), extend(), index(), insert(), pop(), remove(), reverse(), sort(), etc║
-║Tuplas (Constantes)                                                                                                     ║
-║● Índices                                                                                                               ║
-║● Recorrer Tuplas                                                                                                       ║
-║● Sentencias:  index(), count(), etc.                                                                                   ║
-║Diccionarios {clave:valor asociado}                                                                                     ║
-║● Funcionamiento de diccionarios                                                                                        ║
-║● Sentencias:  clear(), copy(), fromkeys(), get(), items(), keys(), pop(),                                              ║
-║● popitem(), reverse(), setdefault(), update(), values(), etc.                                                          ║
-║● Sets y otros                                                                                                          ║
+║                                                                                                                        ║
+║                           Python List/Array Methods                                                                    ║
+║                          ---------------------------                                                                   ║
+║                                                                                                                        ║
+║          Method    Description                                                                                         ║
+║                                                                                                                        ║
+║          append()  Adds an element at the end of the list                                                              ║
+║          clear()   Removes all the elements from the list                                                              ║
+║          copy()    Returns a copy of the list                                                                          ║
+║          count()   Returns the number of elements with the specified value                                             ║
+║          extend()  Add the elements of a list (or any iterable), to the end                                            ║
+║                    of the current list                                                                                 ║
+║          index()   Returns the index of the first element with the specified                                           ║
+║                    value                                                                                               ║
+║          insert()  Adds an element at the specified position                                                           ║
+║          pop()     Removes the element at the specified position                                                       ║
+║          remove()  Removes the first item with the specified value                                                     ║
+║          reverse() Reverses the order of the list                                                                      ║
+║          sort()    Sorts the list                                                                                      ║
+║                                                                                                                        ║
 ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 4 – Funciones                                                                                                    ║
-║● Iterar: ejecución repetida de un conjunto de sentencias                                                               ║
-║Sentencias:  def (): return                                                                                             ║
-║● Parámetros de entrada de datos                                                                                        ║
-║● Retorno de datos a la salida                                                                                          ║
-║● Return de listas                                                                                                      ║
-║● Parámetros con valor por defecto (=val;*;**)                                                                          ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 5 – Módulos y Librerías                                                                                          ║
-║● Uso de métodos y funciones de un archivo externo Sentencias: Import, from                                             ║
-║● Generar un modulo                                                                                                     ║
-║● Uso de librerías                                                                                                      ║
-║● Generar archivos, leerlos, escribirlos (TXT - plano/ Binario) JSON (Javascript) Pickle (Python)                       ║
-║● Instalación de librerías, ecosistema,                                                                                 ║
-║Métodos: pip, conda,                                                                                                    ║
-║Download e instalación MSI, Linuc, etc                                                                                  ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 6 – Clases Sistema para empaquetar atributos de datos y funcionalidad métodos para instanciar                    ║
-║Sentencias: class ():, self                                                                                             ║
-║● Objetos clases                                                                                                        ║
-║● Objetos instancias                                                                                                    ║
-║● Objetos métodos                                                                                                       ║
-║● Herencias, herencias múltiples                                                                                        ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 7 – Entorno visual - WEB Django Pantallas graficas - Libreria: tkinter, numpy y matplotli                        ║
-║● Pantallas, Frames, Labels, bottons,etc                                                                                ║
-║● Ubicación de elementos, colores, formatos, tamaños, etc.                                                              ║
-║● Ingreso de daros desde pantalla (get)                                                                                 ║
-║● Salida de datos por pantalla                                                                                          ║
-║● Acciones de botones para llamar a funciones                                                                           ║
-║● Graficas de funciones matematicas y otros datos.( series, tortas, 3d, etc.)                                           ║
-║● Python y “Django” e la web framework                                                                                  ║
-║Ejemplos de uso intensivo de Django (Instagram, Pinterest, Mozilla, National Geografic, etc.)                           ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 8 – Bases de Datos locales y en la nube                                                                          ║
-║Tipo: SQL (Mysql) y NoSQL (Mongo)                                                                                       ║
-║Librería: mysql.connector                                                                                               ║
-║Librería: pymongo                                                                                                       ║
-║● Python y “Big Data”                                                                                                   ║
-║● Conexión                                                                                                              ║
-║● cursor(), .execute(), .close                                                                                          ║
-║● Crear Bases, tablas, columnas                                                                                         ║
-║● Tipos de datos, caracteres, numéricos, fecha - hora                                                                   ║
-║● Buscar, insertar, actualizar, borrar, seleccionar, elementos desde y hacia una base de datos                          ║
-║● Where, from. %like%                                                                                                   ║
-║● Firebase, Google Cloud IoT -u otro hub para OIT AWS (Amazon) Azure (MSoft)                                            ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 9 – Fechas, Horas                                                                                                ║
-║● Modulo time, datetime                                                                                                 ║
-║● Manejo de fechas y horas                                                                                              ║
-║● Uso en aplicaciones web, base de datos, multiplataforma, etc.                                                         ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 10 – Internet Of Things – IOT                                                                                    ║
-║● Programación de eventos - Timed Event                                                                                 ║
-║Librería:                                                                                                               ║
-║Scheduler                                                                                                               ║
-║● Módulo sched / Scheduler                                                                                              ║
-║● Declaración de programadores                                                                                          ║
-║● Llamado a funciones como eventos                                                                                      ║
-║● Programar eventos y poner en marcha el programador                                                                    ║
-║● Programación de eventos considerando prioridades                                                                      ║
-║● Cancelación de eventos                                                                                                ║
-║● Python y Internet Of Things – IOT                                                                                     ║
-║● Python y MicroControladores (un matrimonio perfecto)                                                                  ║
-║	Librería:	Zerynth                                                                                                  ║
-║	Ejemplos de uso intensivo de Raspberry Pi y NodeMCU (ESP8266)                                                        ║
-║IOT Con BBDD, Python y Android                                                                                          ║
-║● Python y Amazon - AWS IoT                                                                                             ║
-║● Protocolo MQTT                                                                                                        ║
+║                                                                                                                        ║
+║                                    Listas                                                                              ║
+║                                                                                                                        ║
 ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-"""
-print("############################################################################");
-print("##                                                                        ##");
-print("##      Unidad 4 - Listas, Tuplas y Diccionarios                          ##");
-print("##         Listas                                                         ##");
-print("##            * Índices                                                   ##");
-print("##            * Recorrer listas                                           ##");
-print("##         Tuplas                                                         ##");
-print("##            * Índices                                                   ##");
-print("##            * Recorrer Tuplas                                           ##");
-print("##         Diccionarios                                                   ##");
-print("##            * Funcionamiento de diccionarios                            ##");
-print("##            * Estructuras tipo JSON                                     ##");
-print("##                                                                        ##");
-print("############################################################################");
-print("##                                                                        ##");
-print("##                      Python List/Array Methods                         ##");
-print("##                     ---------------------------                        ##");
-print("##                                                                        ##");
-print("##     Method    Description                                              ##");
-print("##                                                                        ##");
-print("##     append()  Adds an element at the end of the list                   ##");
-print("##     clear()   Removes all the elements from the list                   ##");
-print("##     copy()    Returns a copy of the list                               ##");
-print("##     count()   Returns the number of elements with the specified value  ##");
-print("##     extend()  Add the elements of a list (or any iterable), to the end ##");
-print("##               of the current list                                      ##");
-print("##     index()   Returns the index of the first element with the specified##");
-print("##               value                                                    ##");
-print("##     insert()  Adds an element at the specified position                ##");
-print("##     pop()     Removes the element at the specified position            ##");
-print("##     remove()  Removes the first item with the specified value          ##");
-print("##     reverse() Reverses the order of the list                           ##");
-print("##     sort()    Sorts the list                                           ##");
-print("##                                                                        ##");
-print("############################################################################");
-print("##                                                                        ##");
-print("##                               Listas                                   ##");
-print("##                                                                        ##");
-print("############################################################################");
-print("https://www.w3schools.com/python/python_ref_list.asp");
-print("\nhttps://www.w3schools.com/python/python_lists.asp");
+
+https://www.w3schools.com/python/python_ref_list.asp
+\nhttps://www.w3schools.com/python/python_lists.asp
+""");
+nuevo(0,"inicio");
+#################################################################
 print("""
 list.append(x)
     Agrega un ítem al final de la lista. Equivale a a[len(a):] = [x].
@@ -227,8 +85,9 @@ list.reverse()
 list.copy()
 	Devuelve una copia superficial de la lista. Equivalente a a[:].
 """);
-print (input("		continuar?"));
-limpiar();
+nuevo(0,"inicio");
+#################################################################
+#Clase_listas_Ej_001
 Nombre_lista_1 = ["linea 1","linea 2","linea 3","linea 4","linea 5","linea 6","linea 7","linea 8","linea 9","linea 10"]
 Nombre_lista_2 = ["columna 1","columna 2","columna 3","columna 4","columna 5","columna 6","columna 7","columna 8","columna 9","columna 10"]
 print("Inicio ej005_1 - posiciones")
@@ -238,99 +97,87 @@ print ("posicion [5]  "+Nombre_lista_1[5])
 print ("posicion [7]  "+Nombre_lista_1[7])
 print ("posicion [0]  "+Nombre_lista_1[0])
 print ("posicion [9]  "+Nombre_lista_1[9])
-print (input("Fin ej005_1 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 005_2
-print("Inicio ej005_2 - posiciones negativas") 
+nuevo(1);
+#################################################################
+#Clase_listas_Ej_002
+print("posiciones negativas") 
 print (Nombre_lista_1)
 print ("posicion [-1]  "+Nombre_lista_1[-1])
 print ("posicion [-2]  "+Nombre_lista_1[-2])
 print ("posicion [-3]  "+Nombre_lista_1[-9])
-print (input("Fin ej005_2 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 005_3
-print("Inicio ej005_3 - sectores o porsiones") 
+nuevo(2);
+#################################################################
+#Clase_listas_Ej_003
+print("sectores o porsiones") 
 print (Nombre_lista_1)
 print ("posicion [4 al 8]  "+str(Nombre_lista_1[4:8]))
 print ("posicion [0 al -2]  "+str(Nombre_lista_1[0:-2]))
 print ("posicion [-3 al 5]  "+str(Nombre_lista_1[-3:5])+"error")
-print (input("Fin ej005_3 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 005_4
-print("Inicio ej005_4 - amplio la lista con un dato al final")
+nuevo(3);
+#################################################################
+#Clase_listas_Ej_004
+print("amplio la lista con un dato al final")
 print (Nombre_lista_1)
 print ("Agrego un dato en la posicion FINAL")
 Nombre_lista_1.append ("Nuevo")
 print (Nombre_lista_1)
-print (input("Fin ej005_4 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 005_5
-print("Inicio ej005_5 - amplio la lista con un dato en una posicion elejida")
+nuevo(4);
+#################################################################
+#Clase_listas_Ej_005
+print("amplio la lista con un dato en una posicion elejida")
 print (Nombre_lista_1)
 print ("Agrego un dato en la posicion 5")
 Nombre_lista_1.insert(5,"AQUI_Nuevo_5")
 print (Nombre_lista_1)
-print (input("Fin ej005_5 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 005_6
-print("Inicio ej005_6 - amplio mucho la lista ")
+nuevo(5);
+#################################################################
+#Clase_listas_Ej_006
+print("amplio mucho la lista ")
 print (Nombre_lista_1)
 print ("Agrego o adiciono un conjunto de datos u otra lista a la original")
 Nombre_lista_1.extend(["linea 11","linea 12","linea 13","linea 14","linea 15","linea 16","linea 17","linea 18","linea 19","linea 20"])
 print (Nombre_lista_1)
-print (input("Fin ej005_6 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 005_7
-print("Inicio ej005_7 - busco (si existe) un dato en la lista")
+nuevo(6);
+#################################################################
+#Clase_listas_Ej_007
+print("busco (si existe) un dato en la lista")
 print (Nombre_lista_1)
 print ("Busco si el dato 'AQUI_Nuevo_5' esta en mi lista??")
 print ("AQUI_Nuevo_5" in  Nombre_lista_1)
-print (input("Fin ej005_7 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 005_8
-print("Inicio ej005_8 - busco (si existe) un dato en la lista")
+nuevo(7);
+#################################################################
+#Clase_listas_Ej_008
+print("busco (si existe) un dato en la lista")
 print ("Busco si el dato 'viejo' esta en mi lista??")
 print ("viejo" in  Nombre_lista_1)
-print (input("Fin ej005_8 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 005_9
-print("Inicio ej005_9 - Ubicar la posicion un dato en el index" )
+nuevo(8);
+#################################################################
+#Clase_listas_Ej_009
+print("Ubicar la posicion un dato en el index" )
 print (Nombre_lista_1)
 print ("Ubicar la posicion de 'AQUI_Nuevo_5' en el index y es : ")
 print (Nombre_lista_1.index("AQUI_Nuevo_5"))
-print (input("Fin ej005_9 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 005_10
+nuevo(9);
+#################################################################
+#Clase_listas_Ej_010
 posicion = 0 
-print("Inicio ej005_10 - remuevo el dato especifico")
+print("remuevo el dato especifico")
 print (Nombre_lista_1)
 print ("remuevo de la lista 'AQUI_Nuevo_5'")
 Nombre_lista_1.remove("AQUI_Nuevo_5")
 print (Nombre_lista_1)
-print (input("Fin ej005_10 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 005_11
+nuevo(10);
+#################################################################
+#Clase_listas_Ej_011
 posicion = 0 
-print("Inicio ej005_11 - remuevo el dato en la posicion FINAL")
 print (Nombre_lista_1)
 print ("remuevo el dato en la posicion FINAL")
 Nombre_lista_1.pop()
 print (Nombre_lista_1)
-print (input("Fin ej005_11 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 005_12
-print("Inicio ej005_12 - suma de 2 listas")
+nuevo(11);
+#################################################################
+#Clase_listas_Ej_012
+print("suma de 2 listas")
 print ("Lista original")
 print (Nombre_lista_1)
 print ("Lista nueva")
@@ -338,32 +185,29 @@ print (Nombre_lista_2)
 print ("junto las listas")
 Nombre_lista_3=Nombre_lista_1+Nombre_lista_2
 print (Nombre_lista_3)
-print (input("Fin ej005_12 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 005_13
-print("Inicio ej005_13 - multiplicacion de listas") 
+nuevo(12);
+#################################################################
+#Clase_listas_Ej_013
+print("multiplicacion de listas") 
 print ("Lista original")
 print (Nombre_lista_2)
 print ("repetir datos 3 veces")
 Nombre_lista_2=Nombre_lista_2 * 3
 print (Nombre_lista_2)
-print (input("Fin ej005_13 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 005_14
-print("Inicio ej005_14 - remuevo el dato en la posicion buscada por index")
+nuevo(13);
+#################################################################
+#Clase_listas_Ej_014
+print("remuevo el dato en la posicion buscada por index")
 print (Nombre_lista_1)
 posicion = Nombre_lista_1.index("linea 4")
 print ("Ubicar la posicion de 'linea 4' con .index y es : "+str(posicion))
 print ("delETEO borro la posicion : "+str(posicion))
 del Nombre_lista_1[posicion]
 print (Nombre_lista_1)
-print (input("Fin ej005_14 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 005_15
-print("Inicio ej005_15 - remuevo el dato en la posicion buscada por index")
+nuevo(14);
+#################################################################
+#Clase_listas_Ej_015
+print("remuevo el dato en la posicion buscada por index")
 print("https://python-para-impacientes.blogspot.com/2014/02/programacion-funcional-funciones-de.html")
 print ("""
 Función map()
@@ -377,7 +221,7 @@ def cuadrado(numero):
 lista_VALORES = [-2, 4, -6, 8]
 lista_CUADRADOS = list(map(cuadrado, lista_VALORES))# Convierte a lista el iterador obtenido
 print(lista_CUADRADOS)  # Muestra elementos de la lista
-
+nuevo(0,"inicio");
 print ("""
 Función filter()
 ----------------
@@ -391,7 +235,7 @@ print(list(filter(esneg, lista5)))
 # Muestra los números negativos de la lista
 # La función esneg() es llamada para comprobar, 
 # uno a uno, todos los números de la lista
-
+nuevo(0,"inicio");
 print ("""
 Función reduce()
 ----------------
@@ -407,7 +251,7 @@ def multiplicar(x, y):
 lista = [1, 2, 3, 4]
 valor = functools.reduce(multiplicar, lista)
 print(valor)  # muestra el resultado final
-
+nuevo(0,"inicio");
 print ("""
 Función lambda
 --------------
@@ -427,7 +271,7 @@ for datos in medidas:
     base = datos[0]
     altura = datos[1]
     print(area_triangulo(base, altura))
-
+nuevo(0,"inicio");
 print ("""
 Comprensión de listas
 ----------------------
@@ -455,7 +299,7 @@ L = [1, 2, 3]  # declara lista
 
 # Muestra lista con inversos de cada número
 print([funcion(i) for i in L])
-
+nuevo(0,"inicio");
 print ("""
 Generadores
 -----------
@@ -477,7 +321,7 @@ lista = list(generador(0, 8, 2))
 
 # Muestra lista
 print(lista)  # [0,2,4,6,8]
-
+nuevo(0,"inicio");
 print ("""
 Función Decorador
 -----------------
@@ -541,3 +385,16 @@ multiplicar()
 
 # Muestra la tabla de multiplicar del 10
 multiplicar(10)  
+"""
+lista = ['larry', 'curly', 'moe']
+lista.append('shemp')         ## append elem at end
+lista.insert(0, 'xxx')        ## insert elem at index 0
+lista.extend(['yyy', 'zzz'])  ## add list of elems at end
+  ## ['xxx', 'larry', 'curly', 'moe', 'shemp', 'yyy', 'zzz']
+print lista
+print lista.index('curly')    ## 2
+
+lista.remove('curly')         ## search and remove that element
+lista.pop(1)                  ## removes and returns 'larry'
+print lista  ## ['xxx', 'moe', 'shemp', 'yyy', 'zzz']
+"""

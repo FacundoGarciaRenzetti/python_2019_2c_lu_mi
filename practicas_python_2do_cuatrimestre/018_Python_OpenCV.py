@@ -1,216 +1,70 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# AGT
-# Copyright 2019 Ariel H Garcia Traba <cursos.arT@gmail.com>
-def limpiar():
-    import os
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
-        
-"""
+from Estructura import *
+nuevo(0,"inicio");
+#################################################################
+def Echos():
+	#Con tab colocaremos aqui las precticas hechas
+	pass
+print("""
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗                                                                      ░ ▒ ▓ ┌┐┤│├└┘┴┬─┼╔╗╠╬╣║╚╝╩╦═¤
-║TEMARIO:                                                                                                                ║
-║--------                                                                                                                ║
-║Unidad 1 - Introducción                                                                                                 ║
-║● ¿Qué es Python?                                                                                                       ║
-║● Ventajas y desventajas                                                                                                ║
-║● Ecosistema Python y Comunidad –Librerías extendidas                                                                   ║
-║● Descarga –Opensource                                                                                                  ║
-║● Instalación, configuración y hardware necesario                                                                       ║
-║● Errores sintácticos y lógicos, localización en pantalla y correcciones                                                ║
-║● Importancia del versionado                                                                                            ║
-║● GIT Colaborativo –Pair Programming                                                                                    ║
-║	o Introducción a GIT                                                                                                 ║
-║	o Creando un repositorio, clonar, branches                                                                           ║
-║	oBorrar, guardar (STASH), requperar (POP)                                                                            ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 2 – Software                                                                                                     ║
-║Características de Python                                                                                               ║
-║● Software libre                                                                                                        ║
-║● Alto nivel                                                                                                            ║
-║● Multiparadigma                                                                                                        ║
-║● Portable                                                                                                              ║
-║● Programación Secuencial y Orientada a Objetos                                                                         ║
-║● Multiplataforma                                                                                                       ║
-║● Interpretado                                                                                                          ║
-║● Tipado dinámico                                                                                                       ║
-║● Estructura (TAB)                                                                                                      ║
 ║                                                                                                                        ║
-║Entorno de Desarrollo Intérprete – IDEs                                                                                 ║
-║● Elección según el propósito del trabajo:                                                                              ║
-║	PyCharm, PyDev, Atom, Spyder, PyScripter, Eclipse, IPython.                                                          ║
-║● Entornos especiales: Anaconda (Data Science Platform),  Jupyter (Notebooks).                                          ║
-║● Consola, pantalla gráfica y entorno                                                                                   ║
-║● Salida de datos por pantalla                                                                                          ║
-║	o Sentencias: print ()                                                                                               ║
-║● Ingreso de datos por teclado                                                                                          ║
-║● Sentencias: input ()                                                                                                  ║
+║              Unidad 5 - MySQL, Parte 1                                                                                 ║
+║                 * INSERT, UPDATE, DELETE, SELECT                                                                       ║
+║                 * FECHAS Y HORAS                                                                                       ║
+║                 * %LIKE%                                                                                               ║
+║                 * JOIN                                                                                                 ║
+║                                                                                                                        ║
+║              Unidad 6 - MySQL, Parte 2                                                                                 ║
+║                 * MySQL en Python                                                                                      ║
+║                 * Cursor y verificación de consultas                                                                   ║
+║                                                                                                                        ║
 ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 3 - Estructura y primeros Trabajos con datos                                                                     ║
-║Variables, Constantes                                                                                                   ║
-║● Flujo de datos, estructura, linealidad, condicionales, bucles                                                         ║
-║● Estructuras condicionales simples, compuestas y anidadas                                                              ║
-║● Sentencias: If , elif, else, :                                                                                        ║
-║● Estructuras repetitivas                                                                                               ║
-║● Sentencias:  for, range, while, else :                                                                                ║
-║● Estructuras modificaciones                                                                                            ║
-║● Sentencias:  break, continue, pass                                                                                    ║
-║● Operadores:                                                                                                           ║
-║● Comparación: ==, <, <=, >, >=, !=                                                                                     ║
-║● Lógicos:  and, not, or                                                                                                ║
-║● Aritméticos: +,-*, **, /, //, %, (ver librería math)                                                                  ║
-║● Asignación: =, += , - = , *=  , ** , /= , //= , %=                                                                    ║
-║● Especiales: is, is not,  in, not in                                                                                   ║
-║Espacios, nombres, ámbitos, objetos                                                                                     ║
-║● Variables y constantes - Tipos                                                                                        ║
-║● Procesamiento de cadenas                                                                                              ║
-║Listas [variables]                                                                                                      ║
-║● Índices                                                                                                               ║
-║● Recorrer listas                                                                                                       ║
-║● Sentencias:  append(),  clear(), copy(), count(), extend(), index(), insert(), pop(), remove(), reverse(), sort(), etc║
-║Tuplas (Constantes)                                                                                                     ║
-║● Índices                                                                                                               ║
-║● Recorrer Tuplas                                                                                                       ║
-║● Sentencias:  index(), count(), etc.                                                                                   ║
-║Diccionarios {clave:valor asociado}                                                                                     ║
-║● Funcionamiento de diccionarios                                                                                        ║
-║● Sentencias:  clear(), copy(), fromkeys(), get(), items(), keys(), pop(),                                              ║
-║● popitem(), reverse(), setdefault(), update(), values(), etc.                                                          ║
-║● Sets y otros                                                                                                          ║
+║                                                                                                                        ║
+║                              manejo de imagennes                                                                       ║
+║                                                                                                                        ║
+║                              libreria opencv2                                                                          ║
+║                                                                                                                        ║
+║                              ROI, Region of Image                                                                      ║
+║                                                                                                                        ║
 ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 4 – Funciones                                                                                                    ║
-║● Iterar: ejecución repetida de un conjunto de sentencias                                                               ║
-║Sentencias:  def (): return                                                                                             ║
-║● Parámetros de entrada de datos                                                                                        ║
-║● Retorno de datos a la salida                                                                                          ║
-║● Return de listas                                                                                                      ║
-║● Parámetros con valor por defecto (=val;*;**)                                                                          ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 5 – Módulos y Librerías                                                                                          ║
-║● Uso de métodos y funciones de un archivo externo Sentencias: Import, from                                             ║
-║● Generar un modulo                                                                                                     ║
-║● Uso de librerías                                                                                                      ║
-║● Generar archivos, leerlos, escribirlos (TXT - plano/ Binario) JSON (Javascript) Pickle (Python)                       ║
-║● Instalación de librerías, ecosistema,                                                                                 ║
-║Métodos: pip, conda,                                                                                                    ║
-║Download e instalación MSI, Linuc, etc                                                                                  ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 6 – Clases Sistema para empaquetar atributos de datos y funcionalidad métodos para instanciar                    ║
-║Sentencias: class ():, self                                                                                             ║
-║● Objetos clases                                                                                                        ║
-║● Objetos instancias                                                                                                    ║
-║● Objetos métodos                                                                                                       ║
-║● Herencias, herencias múltiples                                                                                        ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 7 – Entorno visual - WEB Django Pantallas graficas - Libreria: tkinter, numpy y matplotli                        ║
-║● Pantallas, Frames, Labels, bottons,etc                                                                                ║
-║● Ubicación de elementos, colores, formatos, tamaños, etc.                                                              ║
-║● Ingreso de daros desde pantalla (get)                                                                                 ║
-║● Salida de datos por pantalla                                                                                          ║
-║● Acciones de botones para llamar a funciones                                                                           ║
-║● Graficas de funciones matematicas y otros datos.( series, tortas, 3d, etc.)                                           ║
-║● Python y “Django” e la web framework                                                                                  ║
-║Ejemplos de uso intensivo de Django (Instagram, Pinterest, Mozilla, National Geografic, etc.)                           ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 8 – Bases de Datos locales y en la nube                                                                          ║
-║Tipo: SQL (Mysql) y NoSQL (Mongo)                                                                                       ║
-║Librería: mysql.connector                                                                                               ║
-║Librería: pymongo                                                                                                       ║
-║● Python y “Big Data”                                                                                                   ║
-║● Conexión                                                                                                              ║
-║● cursor(), .execute(), .close                                                                                          ║
-║● Crear Bases, tablas, columnas                                                                                         ║
-║● Tipos de datos, caracteres, numéricos, fecha - hora                                                                   ║
-║● Buscar, insertar, actualizar, borrar, seleccionar, elementos desde y hacia una base de datos                          ║
-║● Where, from. %like%                                                                                                   ║
-║● Firebase, Google Cloud IoT -u otro hub para OIT AWS (Amazon) Azure (MSoft)                                            ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 9 – Fechas, Horas                                                                                                ║
-║● Modulo time, datetime                                                                                                 ║
-║● Manejo de fechas y horas                                                                                              ║
-║● Uso en aplicaciones web, base de datos, multiplataforma, etc.                                                         ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 10 – Internet Of Things – IOT                                                                                    ║
-║● Programación de eventos - Timed Event                                                                                 ║
-║Librería:                                                                                                               ║
-║Scheduler                                                                                                               ║
-║● Módulo sched / Scheduler                                                                                              ║
-║● Declaración de programadores                                                                                          ║
-║● Llamado a funciones como eventos                                                                                      ║
-║● Programar eventos y poner en marcha el programador                                                                    ║
-║● Programación de eventos considerando prioridades                                                                      ║
-║● Cancelación de eventos                                                                                                ║
-║● Python y Internet Of Things – IOT                                                                                     ║
-║● Python y MicroControladores (un matrimonio perfecto)                                                                  ║
-║	Librería:	Zerynth                                                                                                  ║
-║	Ejemplos de uso intensivo de Raspberry Pi y NodeMCU (ESP8266)                                                        ║
-║IOT Con BBDD, Python y Android                                                                                          ║
-║● Python y Amazon - AWS IoT                                                                                             ║
-║● Protocolo MQTT                                                                                                        ║
+║                                                                                                                        ║
+║              Unidad 8 - OPEN cv2                                                                                       ║
+║                 * Procesamiento de imágenes en Opencv2                                                                 ║
+║                 * Detección y descripción de imágenes                                                                  ║
+║                 * Detección de objetos                                                                                 ║
+║                                                                                                                        ║
 ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-"""
-print("############################################################################");
-print("##                                                                        ##");
-print("##         Unidad 5 - MySQL, Parte 1                                      ##");
-print("##            * INSERT, UPDATE, DELETE, SELECT                            ##");
-print("##            * FECHAS Y HORAS                                            ##");
-print("##            * %LIKE%                                                    ##");
-print("##            * JOIN                                                      ##");
-print("##                                                                        ##");
-print("##         Unidad 6 - MySQL, Parte 2                                      ##");
-print("##            * MySQL en Python                                           ##");
-print("##            * Cursor y verificación de consultas                        ##");
-print("##                                                                        ##");
-print("############################################################################");
-print("##                                                                        ##");
-print("##                         manejo de imagennes                            ##");
-print("##                                                                        ##");
-print("##                         libreria opencv2                               ##");
-print("##                                                                        ##");
-print("##                         ROI, Region of Image                           ##");
-print("##                                                                        ##");
-print("############################################################################");
-print("##                                                                        ##");
-print("##         Unidad 8 - OPEN cv2                                            ##");
-print("##            * Procesamiento de imágenes en Opencv2                      ##");
-print("##            * Detección y descripción de imágenes                       ##");
-print("##            * Detección de objetos                                      ##");
-print("##                                                                        ##");
-print("############################################################################");
-print("##                                                                        ##");
-print("############################################################################");
-print("https://docs.opencv2.org/trunk/d6/d00/tutorial_py_root.html");
-print("https://opencv-python-tutroals.readthedocs.io/en/latest/");
+https://docs.opencv2.org/trunk/d6/d00/tutorial_py_root.html
+https://opencv-python-tutroals.readthedocs.io/en/latest/
 
 # si da error copiar y pegar en un buscador y rastrear el link
 
-print("https://docs.python.org/3/library/sched.html");
-print("https://www.quora.com/How-do-I-install-Python-packages-in-Anaconda");
-print("https://docs.python.org/2/library/sched.html");
-print("https://pypi.org/project/opencv2-python/");
-print("https://docs.opencv2.org/3.0-beta/doc/py_tutorials/py_tutorials.html");
-print("https://docs.opencv2.org/trunk/d5/de5/tutorial_py_setup_in_windows.html");
-print("https://www.pyimagesearch.com/2018/07/19/opencv-tutorial-a-guide-to-learn-opencv/");
-print("https://pythonprogramming.net/loading-images-python-opencv-tutorial/");
-print("https://github.com/jrosebr1/imutils");
-print("https://www.pyimagesearch.com/2015/11/09/pedestrian-detection-opencv/")
+https://docs.python.org/3/library/sched.html
+https://www.quora.com/How-do-I-install-Python-packages-in-Anaconda
+https://docs.python.org/2/library/sched.html
+https://pypi.org/project/opencv2-python/
+https://docs.opencv2.org/3.0-beta/doc/py_tutorials/py_tutorials.html
+https://docs.opencv2.org/trunk/d5/de5/tutorial_py_setup_in_windows.html
+https://www.pyimagesearch.com/2018/07/19/opencv-tutorial-a-guide-to-learn-opencv/
+https://pythonprogramming.net/loading-images-python-opencv-tutorial/
+https://github.com/jrosebr1/imutils");
+https://www.pyimagesearch.com/2015/11/09/pedestrian-detection-opencv/
 
-print("http://acodigo.blogspot.com/2017/08/deteccion-de-contornos-con-opencv-python.html");
-print("https://www.learnopencv.com/invisibility-cloak-using-color-detection-and-segmentation-with-opencv/");
-print("https://www.youtube.com/watch?time_continue=18&v=YLnP2Ge65MU");
-print("\n\n\nen especial\nhttps://pythonprogramming.net/drawing-writing-python-opencv-tutorial/?completed=/loading-video-python-opencv-tutorial/")
-print("https://foro.elhacker.net/scripting/vision_artificial_con_python-t467756.0.html")
-print("https://github.com/CAChemE/curso-opencv-python")
-
+http://acodigo.blogspot.com/2017/08/deteccion-de-contornos-con-opencv-python.html");
+https://www.learnopencv.com/invisibility-cloak-using-color-detection-and-segmentation-with-opencv/"
+https://www.youtube.com/watch?time_continue=18&v=YLnP2Ge65MU"
+\n\n\nen especial\nhttps://pythonprogramming.net/drawing-writing-python-opencv-tutorial/?completed=/loading-video-python-opencv-tutorial/
+https://foro.elhacker.net/scripting/vision_artificial_con_python-t467756.0.html
+https://github.com/CAChemE/curso-opencv-python
+""");
 
 import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 import imutils
 import os
-
+nuevo(0,"inicio");
+#################################################################
+#Clase_openCV_01
 # Make an array of 120,000 random bytes.
 random_byte_array = bytearray(os.urandom(120000))
 flat_numpy_array = np.array(random_byte_array)
@@ -225,21 +79,17 @@ cv2.imshow('Random color', bgr_image)
 
 cv2.waitKey(1000)
 cv2.destroyAllWindows()
-
-
-
-#print (input("		continuar?"));
 imagen = cv2.imread("brazo_robotico.png")
-print("#########################################################");
-# Ej 016_1
-print("Inicio ej016_1 - ");
+nuevo(1);
+#################################################################
+#Clase_openCV_02
+
 cv2.imshow("ej016_1", imagen)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_1 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_2
+nuevo(2);
+#################################################################
+#Clase_openCV_03
 print("Inicio ej016_2 - ");
 imagen2 = (255-imagen)
 print("Hay un caso especial en que puedes crear una ventana y cargar la imagen posteriormente. En ese caso, puedes especificar si la ventana es redimensionable o no. Esto se realiza con la función cv2.namedWindow(). Por defecto, el indicador (o bandera) es cv2.WINDOW_AUTOSIZE. Pero si se especifica la que el indicador sea  cv2.WINDOW_NORMAL, puedes cambiar el tamaño de la ventana. Esto será útil cuando las dimensiones de la imagen sean muy grandes y se añada una barra de seguimiento (o un scroll).")
@@ -249,11 +99,9 @@ cv2.imshow("WINDOW_AUTOSIZE", imagen)
 cv2.imshow("WINDOW_AUTOSIZE", imagen2)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_2 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_3
-print("Inicio ej016_3 - ");
+nuevo(3);
+#################################################################
+#Clase_openCV_04
 
 rimagen=imagen.copy()
 rimagen=cv2.flip(imagen,1)
@@ -265,11 +113,9 @@ cv2.imshow("vertical flip", rimagen)
 cv2.imshow("horizontal flip", fimagen)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_3 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_4
-print("Inicio ej016_4 - ");
+nuevo(4);
+#################################################################
+#Clase_openCV_05
 frame = cv2.imread("brazo_robotico.png")
 if frame is None:
     print('Error no encontre la imagen brazo_robotico.png')
@@ -284,22 +130,18 @@ frame = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR);
 cv2.imshow("chau blanco", frame)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_4 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_5
-print("Inicio ej016_5 - ");
+nuevo(5);
+#################################################################
+#Clase_openCV_06
 img = cv2.imread("brazo_robotico.png")
 res = cv2.resize(img,None,fx=2, fy=2, interpolation = cv2.INTER_CUBIC)
 
 cv2.imshow("apmlio x2 ", res)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_5 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_6
-print("Inicio ej016_6 - ");
+nuevo(6);
+#################################################################
+#Clase_openCV_07
 img = cv2.imread("brazo_robotico.png")
 height, width, depth = img.shape
 circle_img = np.zeros((height, width), np.uint8)
@@ -308,11 +150,9 @@ masked_img = cv2.bitwise_and(img, img, mask=circle_img)
 cv2.imshow("masked", masked_img)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_6 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_7
-print("Inicio ej016_7 - ");
+nuevo(7);
+#################################################################
+#Clase_openCV_08
 
 img = cv2.imread("brazo_robotico.png")
 # make sure that you have saved it in the same folder 
@@ -339,11 +179,9 @@ bilFilter = cv2.bilateralFilter(img,9,75,75)
 cv2.imshow('Bilateral Filtering', bilFilter) 
 cv2.waitKey(1500) 
 cv2.destroyAllWindows() 
-#print (input("Fin ej016_7 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_8
-print("Inicio ej016_8 - ");
+nuevo(8);
+#################################################################
+#Clase_openCV_09
 img = cv2.imread("brazo_robotico.png")
 nemo = cv2.imread('nemo.png')
 cv2.imshow("masked", nemo)
@@ -353,22 +191,17 @@ nemo = cv2.cvtColor(nemo, cv2.COLOR_BGR2RGB)
 cv2.imshow("masked", nemo)
 cv2.waitKey(1500) 
 cv2.destroyAllWindows() 
-#print (input("Fin ej016_8 \n		continuar?"));
-
-print("#########################################################");
-# Ej 016_9
-print("Inicio ej016_7 - ");
-
+nuevo(9);
+#################################################################
+#Clase_openCV_010
 imagen = cv2.imread('opencv_logo.png')
 imagenA =  cv2.cvtColor(imagen, cv2.COLOR_BGR2HSV)
 cv2.imshow('Ej 016_9 Amarillo', imagenA) 
 cv2.waitKey(1500)
 cv2.destroyAllWindows() 
-#print (input("Fin ej016_9 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_10
-print("Inicio ej016_10 - ");
+nuevo(10);
+#################################################################
+#Clase_openCV_011
 # Algoritmo de deteccion de colores multiples
 # Por Glar3
 # www.robologs.net
@@ -410,11 +243,9 @@ cv2.imshow('Imagen', imagen)
 #Salir con ESC
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_10 \n		continuar?"));
-
-print("#########################################################");
-# Ej 016_11
-print("Inicio ej016_11 - ");
+nuevo(11);
+#################################################################
+#Clase_openCV_012
 
 print("https://nbviewer.jupyter.org/github/CAChemE/opencv-python/blob/master/opencv-and-python.ipynb#3.-Manejo-de-ficheros,-c%C3%A1maras-e-interfaces-gr%C3%A1ficas-de-usuario")
 img =  cv2.imread("brazo_robotico.png")
@@ -440,11 +271,9 @@ cv2.imshow('Sobel X', sobelx)
 cv2.imshow('Sobel Y', sobely)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_11 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_12
-print("Inicio ej016_12 - ");
+nuevo(12);
+#################################################################
+#Clase_openCV_013
 img =  cv2.imread("brazo_robotico.png")
 
 # RGB -> Grayscale
@@ -464,7 +293,9 @@ cv2.imshow('dst', img)
 
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-print("#########################################################");
+nuevo(13);
+#################################################################
+#Clase_openCV_014
 # Initiate ORB detector
 if cv2.__version__.startswith('2.4'):
     orb = cv2.ORB()
@@ -479,11 +310,9 @@ img2 = cv2.drawKeypoints(img, kp, None, color=(0, 255, 0), flags=0)
 cv2.imshow('Keypoints', img2)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_11 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_12
-print("Inicio ej016_12 - ");
+nuevo(14);
+#################################################################
+#Clase_openCV_015
 imagen = cv2.imread("brazo_robotico.png")
 img2gray = cv2.cvtColor(imagen,cv2.COLOR_BGR2GRAY)
 (h, w, d) = imagen.shape
@@ -491,152 +320,123 @@ print("width={}, height={}, depth={}".format(w, h, d))
 cv2.imshow("Ej 016_2", img2gray)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_12 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_13
-print("Inicio ej016_13 - ");
+nuevo(15);
+#################################################################
+#Clase_openCV_016
 resized = cv2.resize(imagen, (200, 200))
 cv2.imshow("Fixed Resizing", resized)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_13 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_14
-print("Inicio ej016_14 - ");
+nuevo(16);
+#################################################################
+#Clase_openCV_017
 r = 800.0 / w
 dim = (800, int(h * r))
 resized = cv2.resize(imagen, dim)
 cv2.imshow("Aspect Ratio Resize", resized)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_14 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_15
-print("Inicio ej016_15 - ");
+nuevo(17);
+#################################################################
+#Clase_openCV_018
 resized = imutils.resize(imagen, width=600)
 cv2.imshow("Imutils Resize", resized)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_15 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_16
-print("Inicio ej016_16 - ");
+nuevo(18);
+#################################################################
+#Clase_openCV_019
 center = (w // 2, h // 2)
 M = cv2.getRotationMatrix2D(center, -45, 1.0)
 rotated = cv2.warpAffine(imagen, M, (w, h))
 cv2.imshow("Opencv2 Rotation", rotated)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_16 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_17
-print("Inicio ej016_17 - ");
+nuevo(19);
+#################################################################
+#Clase_openCV_020
 rotated = imutils.rotate(imagen, 45)
 cv2.imshow("Imutils Rotation", rotated)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_18 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_18
-print("Inicio ej016_18 - ");
+nuevo(20);
+#################################################################
+#Clase_openCV_021
 blurred = cv2.GaussianBlur(imagen, (11, 11), 0)
 cv2.imshow("Blurred", blurred)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_18 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_19
-print("Inicio ej016_19 - grabo ");
+nuevo(21);
+#################################################################
+#Clase_openCV_022
+print("grabo ");
 # cargar el archivo PNG indicado
 print("cargar el archivo PNG indicado");
 img = cv2.imread('image.png', cv2.IMREAD_GRAYSCALE)
 # guardar la imagen en formato JPG
 print("guardar la imagen en formato JPG");
 cv2.imwrite('save.jpg', img)
-#print (input("Fin ej016_19 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_20
-print("Inicio ej016_20 - ");
+nuevo(22);
+#################################################################
+#Clase_openCV_023
 output = imagen.copy()
 cv2.rectangle(output, (10, 120), (100, 250), (0, 0, 255), 2)
 cv2.imshow("Rectangle", output)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_20 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_21
-print("Inicio ej016_21 - ");
+nuevo(23);
+#################################################################
+#Clase_openCV_024
 output = imagen.copy()
 cv2.circle(output, (200, 200), 50, (255, 0, 0), -1)
 cv2.imshow("Circle", output)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_21 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_22
-print("Inicio ej016_22 - ");
+nuevo(24);
+#################################################################
+#Clase_openCV_025
 output = imagen.copy()
 cv2.putText(output, "UTN 2019 en Opencv2!!!", (10, 25), 
 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (55, 55, 255), 2)
 cv2.imshow("Texto", output)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_22 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_23
-print("Inicio ej016_23- ");
+nuevo(25);
+#################################################################
+#Clase_openCV_026
 imagen = cv2.imread("brazo_robotico.png",cv2.IMREAD_GRAYSCALE)
 cv2.imshow("Escalas de grices", imagen)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_23 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_24
-print("Inicio ej016_24 - ");
+nuevo(26);
+#################################################################
+#Clase_openCV_027
 img1 = cv2.imread("brazo_robotico.png")
 img2 = cv2.imread('brazo_robotico_marco.png')
 add = img2+img1
 cv2.imshow('add',add)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_24 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_25
-print("Inicio ej016_25 - ");
+nuevo(27);
+#################################################################
+#Clase_openCV_028
 img = cv2.imread("brazo_robotico.png")
 retval, threshold = cv2.threshold(img, 112, 155, cv2.THRESH_BINARY)
 cv2.imshow('original',img)
 cv2.imshow('threshold',threshold)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_25 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_26
-print("Inicio ej016_26 - ");
+nuevo(28);
+#################################################################
+#Clase_openCV_029
 imagen = cv2.imread("brazo_robotico.png",cv2.IMREAD_COLOR)
 cv2.line(imagen,(0,0),(150,150),(100,25,200),15)
 cv2.imshow('image',imagen)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_26 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_27
-print("Inicio ej016_27 - ");
+nuevo(29);
+#################################################################
+#Clase_openCV_030
 imagen = cv2.imread("brazo_robotico.png",cv2.IMREAD_COLOR)
 #referenciamos un sector en especial via ROI,  Region of Image,:
 px = imagen[100:150,100:150]
@@ -654,16 +454,9 @@ imagen[0:131,160:250] = celu
 cv2.imshow('image',imagen)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_27 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_28
-print("Inicio ej016_28 - ");
-#print (input("Fin ej016_28 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_29
-print("Inicio ej016_29 - ");
+nuevo(30);
+#################################################################
+#Clase_openCV_031
 img1 = cv2.imread("brazo_robotico.png")
 img2 = cv2.imread('icono.png')
 # I want to put logo on top-left corner, So I create a ROI
@@ -683,10 +476,9 @@ img1[0:rows, 0:cols ] = dst
 cv2.imshow('res',img1)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
-#print (input("Fin ej016_29 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 016_30
+nuevo(31);
+#################################################################
+#Clase_openCV_032
 print("Inicio ej016_30 - ");
 print("1. Umbral binario (THRESH_BINARY)");
 print("Si la intensidad del pixel es mayor al umbral establecido el pixel de destino a establece al máximo valor definido, en caso contrario se establece a cero:");
@@ -741,13 +533,9 @@ cv2.imshow('result', dst)
 cv2.waitKey(1500)
 cv2.destroyAllWindows()
 
-#print (input("Fin ej016_30 \n		continuar?"));
-limpiar();
-
-print("#########################################################");
-# Ej 016_31
-print("Inicio ej016_31 - ");
-
+nuevo(32);
+#################################################################
+#Clase_openCV_033
 cap = cv2.VideoCapture('video-using-opencv.mp4',0)
 while(cap.isOpened()):
   ret, frame = cap.read()
@@ -757,11 +545,11 @@ while(cap.isOpened()):
       break
 cap.release()
 cv2.destroyAllWindows()
-
-print("#########################################################");
+nuevo(33);
+#################################################################
+#Clase_openCV_034
 captura = cv2.VideoCapture('video-using-opencv.mp4')
 while(1):
-     
     #Capturamos una imagen y la convertimos de RGB -> HSV
     _, imagen = captura.read()
     hsv = cv2.cvtColor(imagen, cv2.COLOR_BGR2HSV)
@@ -781,7 +569,6 @@ while(1):
     #Descomentar para ver el area por pantalla
     #print area
     if(area > 2000000):
-         
         #Buscamos el centro x, y del objeto
         x = int(moments['m10']/moments['m00'])
         y = int(moments['m01']/moments['m00'])
@@ -793,7 +580,6 @@ while(1):
         #Dibujamos una marca en el centro del objeto
         cv2.rectangle(imagen, (x, y), (x+2, y+2),(0,0,255), 2)
      
-     
     #Mostramos la imagen original con la marca del centro y
     #la mascara
     cv2.imshow('mask', mask)
@@ -804,8 +590,9 @@ while(1):
  
 cv2.destroyAllWindows()
 
-print("#########################################################");
-
+nuevo(34);
+#################################################################
+#Clase_openCV_035
 video_file = 'video-using-opencv.mp4'
 cap = cv2.VideoCapture(video_file)
 
@@ -828,7 +615,9 @@ while (cap.isOpened()):
 
 cap.release()
 cv2.destroyAllWindows()
-print("#########################################################");
+nuevo(36);
+#################################################################
+#Clase_openCV_037
 cap = cv2.VideoCapture(video_file)
 
 # Properties
@@ -873,7 +662,9 @@ while(cap.isOpened()):
 # Release everything if job is finished
 cap.release()
 cv2.destroyAllWindows()
-print("#########################################################");
+nuevo(37);
+#################################################################
+#Clase_openCV_038
 # empty function called when 
 # any trackbar moves 
 def emptyFunction(): 
@@ -908,6 +699,6 @@ def main():
 # Calling main()          
 if __name__=="__main__": 
     main()
-#print (input("Fin ej016_31 \n		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(38,"fin");
+#################################################################
+

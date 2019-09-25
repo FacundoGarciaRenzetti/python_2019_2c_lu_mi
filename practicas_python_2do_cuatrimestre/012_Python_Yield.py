@@ -24,19 +24,22 @@ def limpiar():
 ║● GIT Colaborativo –Pair Programming                                                                                    ║
 ║	o Introducción a GIT                                                                                                 ║
 ║	o Creando un repositorio, clonar, branches                                                                           ║
-║	oBorrar, guardar (STASH), requperar (POP)                                                                            ║
+║	o Borrar, guardar (STASH), requperar (POP)                                                                           ║
 ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 ║Unidad 2 – Software                                                                                                     ║
 ║Características de Python                                                                                               ║
-║● Software libre                                                                                                        ║
+║● Software libre - Open Source                                                                                          ║
 ║● Alto nivel                                                                                                            ║
-║● Multiparadigma                                                                                                        ║
+║● Multiparadigma vs fines y estilos de programacion                                                                     ║
 ║● Portable                                                                                                              ║
 ║● Programación Secuencial y Orientada a Objetos                                                                         ║
-║● Multiplataforma                                                                                                       ║
-║● Interpretado                                                                                                          ║
+║● Multiplataforma Unix, Linux, Windows, IO - Kivy App                                                                   ║
+║● Interpretado / Compilado                                                                                              ║
 ║● Tipado dinámico                                                                                                       ║
-║● Estructura (TAB)                                                                                                      ║
+║● Funcional Mutacion de tipos de variables                                                                              ║
+║● Estructurado (TAB)                                                                                                    ║
+║● Hilos (Complejo, opcion Celery)                                                                                       ║
+║● Versatilida                                                                                                           ║
 ║                                                                                                                        ║
 ║Entorno de Desarrollo Intérprete – IDEs                                                                                 ║
 ║● Elección según el propósito del trabajo:                                                                              ║
@@ -46,7 +49,7 @@ def limpiar():
 ║● Salida de datos por pantalla                                                                                          ║
 ║	o Sentencias: print ()                                                                                               ║
 ║● Ingreso de datos por teclado                                                                                          ║
-║● Sentencias: input ()                                                                                                  ║
+║	o Sentencias: input ()                                                                                               ║
 ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 ║Unidad 3 - Estructura y primeros Trabajos con datos                                                                     ║
 ║Variables, Constantes                                                                                                   ║
@@ -95,7 +98,7 @@ def limpiar():
 ║● Generar archivos, leerlos, escribirlos (TXT - plano/ Binario) JSON (Javascript) Pickle (Python)                       ║
 ║● Instalación de librerías, ecosistema,                                                                                 ║
 ║Métodos: pip, conda,                                                                                                    ║
-║Download e instalación MSI, Linuc, etc                                                                                  ║
+║Download e instalación MSI, Linux, etc                                                                                  ║
 ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 ║Unidad 6 – Clases Sistema para empaquetar atributos de datos y funcionalidad métodos para instanciar                    ║
 ║Sentencias: class ():, self                                                                                             ║
@@ -161,8 +164,11 @@ Hay que precisar que el término generador define tanto a la propia función com
 Una característica importante de los generadores es que tanto las variables locales como el punto de inicio de la ejecución se guardan automáticamente
 entre las llamadas sucesivas que se hagan al generador, es decir, a diferencia de una función común, una nueva llamada a un generador no inicia la ejecución al principio de la función,
 sino que la reanuda inmediatamente después del punto donde se encuentre la última declaración yield (que es donde terminó la función en la última llamada). 
-""")
-print("Inicio ej007_1 - yield")
+
+""");
+nuevo(0,"inicio");
+#################################################################
+#Clase_yield_Ej_001
 
 def numeros(max):
     contador=0
@@ -172,8 +178,9 @@ def numeros(max):
 resultados = numeros(5)
 for variable in resultados:
     print(variable)
-print("#########################################################");
-
+nuevo(1);
+#################################################################
+#Clase_yield_Ej_002
 
 def numeros_pares(maximo):
 	contador = 1
@@ -184,9 +191,9 @@ resultados = numeros_pares(10)
 for variable in resultados:
 	print (variable)
 
-print (input("Fin ej007_1 \n		continuar?"));
-limpiar();
-print("#########################################################");
+nuevo(2);
+#################################################################
+#Clase_yield_Ej_003
 # Declara generador
 
 def gen_basico():
@@ -200,15 +207,17 @@ for valor in gen_basico():
 # Crea objeto generador y muestra tipo de objeto
 
 generador = gen_basico()
-print(generador)  # generator object gen_basico at 0x7f75ffad55e8
-print(type(generador))  # class 'generator'
+print(generador)  			# generator object gen_basico at 0x7f75ffad55e8
+print(type(generador))  	# class 'generator'
 
 # Convierte a lista el objeto generador y muestra elementos
 
 lista = list(generador)
 print(lista)  # ['uno', 'dos', 'tres']
 print(type(lista))  # class 'list'
-print("#########################################################");
+nuevo(3);
+#################################################################
+#Clase_yield_Ej_004
 def gen_diez_numeros(inicio):
 	fin = inicio + 10    
 	while inicio < fin:
@@ -217,9 +226,11 @@ def gen_diez_numeros(inicio):
 		print("sigo")
 for inicio, fin in gen_diez_numeros(14):
     print(inicio, fin)
-print("#########################################################");
+nuevo(4);
+#################################################################
+
 print ("""TIP
-Que es todo lo *contrarío* a usar listas.
+Un generados seria todo lo *contrarío* a usar listas.
 
 Una lista tienes todos los elementos en memoria y vas iterando sobre cada elemento.
 En cambio un generador cada elemento se va *generando* en cada iteracion. Y obviamente al ser generado no puedes usar indices.

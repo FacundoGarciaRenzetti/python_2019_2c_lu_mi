@@ -1,202 +1,50 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# AGT
-# Copyright 2019 Ariel H Garcia Traba <cursos.arT@gmail.com>
-def limpiar():
-    import os
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
-        
-"""
-╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗                                                                      ░ ▒ ▓ ┌┐┤│├└┘┴┬─┼╔╗╠╬╣║╚╝╩╦═¤
-║TEMARIO:                                                                                                                ║
-║--------                                                                                                                ║
-║Unidad 1 - Introducción                                                                                                 ║
-║● ¿Qué es Python?                                                                                                       ║
-║● Ventajas y desventajas                                                                                                ║
-║● Ecosistema Python y Comunidad –Librerías extendidas                                                                   ║
-║● Descarga –Opensource                                                                                                  ║
-║● Instalación, configuración y hardware necesario                                                                       ║
-║● Errores sintácticos y lógicos, localización en pantalla y correcciones                                                ║
-║● Importancia del versionado                                                                                            ║
-║● GIT Colaborativo –Pair Programming                                                                                    ║
-║	o Introducción a GIT                                                                                                 ║
-║	o Creando un repositorio, clonar, branches                                                                           ║
-║	oBorrar, guardar (STASH), requperar (POP)                                                                            ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 2 – Software                                                                                                     ║
-║Características de Python                                                                                               ║
-║● Software libre                                                                                                        ║
-║● Alto nivel                                                                                                            ║
-║● Multiparadigma                                                                                                        ║
-║● Portable                                                                                                              ║
-║● Programación Secuencial y Orientada a Objetos                                                                         ║
-║● Multiplataforma                                                                                                       ║
-║● Interpretado                                                                                                          ║
-║● Tipado dinámico                                                                                                       ║
-║● Estructura (TAB)                                                                                                      ║
+from Estructura import *
+nuevo(0,"inicio");
+#################################################################
+def Echos():
+	#Con tab colocaremos aqui las precticas hechas
+	pass
+print("""
+╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                        ║
-║Entorno de Desarrollo Intérprete – IDEs                                                                                 ║
-║● Elección según el propósito del trabajo:                                                                              ║
-║	PyCharm, PyDev, Atom, Spyder, PyScripter, Eclipse, IPython.                                                          ║
-║● Entornos especiales: Anaconda (Data Science Platform),  Jupyter (Notebooks).                                          ║
-║● Consola, pantalla gráfica y entorno                                                                                   ║
-║● Salida de datos por pantalla                                                                                          ║
-║	o Sentencias: print ()                                                                                               ║
-║● Ingreso de datos por teclado                                                                                          ║
-║● Sentencias: input ()                                                                                                  ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 3 - Estructura y primeros Trabajos con datos                                                                     ║
-║Variables, Constantes                                                                                                   ║
-║● Flujo de datos, estructura, linealidad, condicionales, bucles                                                         ║
-║● Estructuras condicionales simples, compuestas y anidadas                                                              ║
-║● Sentencias: If , elif, else, :                                                                                        ║
-║● Estructuras repetitivas                                                                                               ║
-║● Sentencias:  for, range, while, else :                                                                                ║
-║● Estructuras modificaciones                                                                                            ║
-║● Sentencias:  break, continue, pass                                                                                    ║
-║● Operadores:                                                                                                           ║
-║● Comparación: ==, <, <=, >, >=, !=                                                                                     ║
-║● Lógicos:  and, not, or                                                                                                ║
-║● Aritméticos: +,-*, **, /, //, %, (ver librería math)                                                                  ║
-║● Asignación: =, += , - = , *=  , ** , /= , //= , %=                                                                    ║
-║● Especiales: is, is not,  in, not in                                                                                   ║
-║Espacios, nombres, ámbitos, objetos                                                                                     ║
-║● Variables y constantes - Tipos                                                                                        ║
-║● Procesamiento de cadenas                                                                                              ║
-║Listas [variables]                                                                                                      ║
-║● Índices                                                                                                               ║
-║● Recorrer listas                                                                                                       ║
-║● Sentencias:  append(),  clear(), copy(), count(), extend(), index(), insert(), pop(), remove(), reverse(), sort(), etc║
-║Tuplas (Constantes)                                                                                                     ║
-║● Índices                                                                                                               ║
-║● Recorrer Tuplas                                                                                                       ║
-║● Sentencias:  index(), count(), etc.                                                                                   ║
-║Diccionarios {clave:valor asociado}                                                                                     ║
-║● Funcionamiento de diccionarios                                                                                        ║
-║● Sentencias:  clear(), copy(), fromkeys(), get(), items(), keys(), pop(),                                              ║
-║● popitem(), reverse(), setdefault(), update(), values(), etc.                                                          ║
-║● Sets y otros                                                                                                          ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 4 – Funciones                                                                                                    ║
-║● Iterar: ejecución repetida de un conjunto de sentencias                                                               ║
-║Sentencias:  def (): return                                                                                             ║
-║● Parámetros de entrada de datos                                                                                        ║
-║● Retorno de datos a la salida                                                                                          ║
-║● Return de listas                                                                                                      ║
-║● Parámetros con valor por defecto (=val;*;**)                                                                          ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 5 – Módulos y Librerías                                                                                          ║
-║● Uso de métodos y funciones de un archivo externo Sentencias: Import, from                                             ║
-║● Generar un modulo                                                                                                     ║
-║● Uso de librerías                                                                                                      ║
-║● Generar archivos, leerlos, escribirlos (TXT - plano/ Binario) JSON (Javascript) Pickle (Python)                       ║
-║● Instalación de librerías, ecosistema,                                                                                 ║
-║Métodos: pip, conda,                                                                                                    ║
-║Download e instalación MSI, Linuc, etc                                                                                  ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 6 – Clases Sistema para empaquetar atributos de datos y funcionalidad métodos para instanciar                    ║
-║Sentencias: class ():, self                                                                                             ║
-║● Objetos clases                                                                                                        ║
-║● Objetos instancias                                                                                                    ║
-║● Objetos métodos                                                                                                       ║
-║● Herencias, herencias múltiples                                                                                        ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 7 – Entorno visual - WEB Django Pantallas graficas - Libreria: tkinter, numpy y matplotli                        ║
-║● Pantallas, Frames, Labels, bottons,etc                                                                                ║
-║● Ubicación de elementos, colores, formatos, tamaños, etc.                                                              ║
-║● Ingreso de daros desde pantalla (get)                                                                                 ║
-║● Salida de datos por pantalla                                                                                          ║
-║● Acciones de botones para llamar a funciones                                                                           ║
-║● Graficas de funciones matematicas y otros datos.( series, tortas, 3d, etc.)                                           ║
-║● Python y “Django” e la web framework                                                                                  ║
-║Ejemplos de uso intensivo de Django (Instagram, Pinterest, Mozilla, National Geografic, etc.)                           ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 8 – Bases de Datos locales y en la nube                                                                          ║
-║Tipo: SQL (Mysql) y NoSQL (Mongo)                                                                                       ║
-║Librería: mysql.connector                                                                                               ║
-║Librería: pymongo                                                                                                       ║
-║● Python y “Big Data”                                                                                                   ║
-║● Conexión                                                                                                              ║
-║● cursor(), .execute(), .close                                                                                          ║
-║● Crear Bases, tablas, columnas                                                                                         ║
-║● Tipos de datos, caracteres, numéricos, fecha - hora                                                                   ║
-║● Buscar, insertar, actualizar, borrar, seleccionar, elementos desde y hacia una base de datos                          ║
-║● Where, from. %like%                                                                                                   ║
-║● Firebase, Google Cloud IoT -u otro hub para OIT AWS (Amazon) Azure (MSoft)                                            ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 9 – Fechas, Horas                                                                                                ║
-║● Modulo time, datetime                                                                                                 ║
-║● Manejo de fechas y horas                                                                                              ║
-║● Uso en aplicaciones web, base de datos, multiplataforma, etc.                                                         ║
-╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║Unidad 10 – Internet Of Things – IOT                                                                                    ║
-║● Programación de eventos - Timed Event                                                                                 ║
-║Librería:                                                                                                               ║
-║Scheduler                                                                                                               ║
-║● Módulo sched / Scheduler                                                                                              ║
-║● Declaración de programadores                                                                                          ║
-║● Llamado a funciones como eventos                                                                                      ║
-║● Programar eventos y poner en marcha el programador                                                                    ║
-║● Programación de eventos considerando prioridades                                                                      ║
-║● Cancelación de eventos                                                                                                ║
-║● Python y Internet Of Things – IOT                                                                                     ║
-║● Python y MicroControladores (un matrimonio perfecto)                                                                  ║
-║	Librería:	Zerynth                                                                                                  ║
-║	Ejemplos de uso intensivo de Raspberry Pi y NodeMCU (ESP8266)                                                        ║
-║IOT Con BBDD, Python y Android                                                                                          ║
-║● Python y Amazon - AWS IoT                                                                                             ║
-║● Protocolo MQTT                                                                                                        ║
+║                                AMBITOS                                                                                 ║
+║                               ---------                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-"""
-print("############################################################################");
-print("##                                                                        ##");
-print("##                                AMBITOS                                 ##");
-print("##                                                                        ##");
-print("############################################################################");
-print("\n * Ambito, es una region en el espacio donde los nombres (cuyos datos busco) son accesibles directamente.(Recordad que puede haber el mismo nombre como atributo como accion y en distintos ambitos");
-print("\n * Ambito, es observable por estructuras de tabulacion")
-print("\n ");
-print("\n * Un espacio con un nombre hereda del Nombre ser la referencia a un dato en un tiempo y espàcio.");
-print("\n     Si en el espacio nombrado su dato No cambia durante el tiempo de ejecucion se denomina * constante (constantes, tuple etc)");
-print("\n     Si en el espacio nombrado su dato Si cambia durante el tiempo de ejecucion se denomina * variable (variable, lista, diccionario, etc");
-print("\n     puede haber muchos espacio nombrado igual en distintos ambitos y sus datos podran ser distintos o no");
-print("\n     Mutable: su contenido (o dicho valor) puede cambiarse en tiempo de ejecución.");
-print("\n     Inmutable: su contenido (o dicho valor) no puede cambiarse en tiempo de ejecución.\n");
-print("\n * Una variable es espacio que tendra un nombre para poder acceder a ella y sus caracteristicas seran dadas por el dato que se incorpore (* tipeado dinamico)");
-print("\n * Una variable de clase es compartida por todas las instancias de una clase. Se definen dentro de la clase (después del encabezado de la clase) pero nunca dentro de un método. Este tipo de variables no se utilizan con tanta frecuencia como las variables de instancia.");
-print("\n * Una variable de instancia se define dentro de un método y pertenece a un objeto determinado de la clase instanciada. ");
-print("\n ");
-print(input("continuar?"));
-print("http://docs.python.org.ar/tutorial/3/classes.html")
-print("#########################################################");
-print("##                                                     ##");
-print("##                                                     ##");
-print("##                     Estructuras                     ##");
-print("##                    -------------                    ##");
-print("##                                                     ##");
-print("##            programa lineal/por objetos              ##");
-print("##                                                     ##");
-print("##                    * linealidad                     ##");
-print("##                        sentencia de disrupcion      ##");
-print("##                       * llamados a metodos internos ##");
-print("##                       * llamados a metodos externos ##");
-print("##                          * propios                  ##");
-print("##                          * ajenos Librerias         ##");
-print("##                                                     ##");
-print("#########################################################");
-print(input("continuar?"));
-print("http://docs.python.org.ar/tutorial/3/classes.html")
-print ("https://pythones.net/instalando-python-3-que-es-un-ide/")
-def limpiar():
-    import os
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
-print("Inicio ej000_AMBITOS_1");
+ * Ambito, es una region en el espacio donde los nombres (cuyos datos busco) son accesibles directamente.(Recordad que puede haber el mismo nombre como atributo como accion y en distintos ambitos");
+ * Ambito, es observable por estructuras de tabulacion")
+ * Un espacio con un nombre hereda del Nombre ser la referencia a un dato en un tiempo y espàcio.");
+     Si en el espacio nombrado su dato No cambia durante el tiempo de ejecucion se denomina * constante (constantes, tuple etc)");
+     Si en el espacio nombrado su dato Si cambia durante el tiempo de ejecucion se denomina * variable (variable, lista, diccionario, etc");
+     puede haber muchos espacio nombrado igual en distintos ambitos y sus datos podran ser distintos o no");
+     Mutable: su contenido (o dicho valor) puede cambiarse en tiempo de ejecución.");
+     Inmutable: su contenido (o dicho valor) no puede cambiarse en tiempo de ejecución.\n");
+ * Una variable es espacio que tendra un nombre para poder acceder a ella y sus caracteristicas seran dadas por el dato que se incorpore (* tipeado dinamico)");
+ * Una variable de clase es compartida por todas las instancias de una clase. Se definen dentro de la clase (después del encabezado de la clase) pero nunca dentro de un método.
+	Este tipo de variables no se utilizan con tanta frecuencia como las variables de instancia.");
+ * Una variable de instancia se define dentro de un método y pertenece a un objeto determinado de la clase instanciada. ");
+http://docs.python.org.ar/tutorial/3/classes.html
+""");
+nuevo(0,"inicio");
+#################################################################
+print("""
+╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                        ║
+║                                Estructuras                                                                             ║
+║                               -------------                                                                            ║
+║                              programa lineal/por objetos                                                               ║
+║                                                                                                                        ║
+║                         * linealidad  sentencia de disrupcion                                                          ║
+║                         * llamados a metodos internos                                                                  ║
+║                         * llamados a metodos externos                                                                  ║
+║                                  * propios                                                                             ║
+║                                  * ajenos Librerias                                                                    ║
+║                                                                                                                        ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+http://docs.python.org.ar/tutorial/3/classes.html
+https://pythones.net/instalando-python-3-que-es-un-ide/""")
+nuevo(0,"inicio");
+#################################################################
+#IO Ej_AMBITOS_1");
 variable = "RAIZ"
 class clase_1:
 	variable = "CLASE_1"
@@ -224,12 +72,9 @@ class clase_2:
 		pass
 	print ("valor de variable = "+variable);
 print ("valor de variable = "+variable);
-print (input("Fin ej000_AMBITOS_1 		continuar?"));
-limpiar();
-print("#########################################################")
-print(input("continuar?"));
-# Ej 000_AMBITOS_2
-print("Inicio ej000_AMBITOS_2");
+nuevo(1);
+#################################################################
+#IO Ej_AMBITOS_2");
 def prueba_ambitos3():
     def funcion_local():
         variable = "variable local"
@@ -248,18 +93,16 @@ def prueba_ambitos3():
     print("Luego de la asignación global a la variable:", variable)
 prueba_ambitos3()
 print("Ambito glogal:", variable)
-print (input("Fin ej000_AMBITOS_2 		continuar?"));
-limpiar();
-print("#########################################################")
-print(input("continuar?"));
-# Ej 000_AMBITOS_2
-print("Inicio ej000_AMBITOS_3");
+nuevo(2);
+#################################################################
+#IO Ej_AMBITOS_3");
 lista_datos_ingresados=[]
 pares = [];
 impares = [];
 def funcion():
 	print("10' datos minimo, 0 para salir");
-	ingreso_num=int(input("ingrese un dato numerico entero > 0  :"))
+	ingreso_num=input("ingrese un dato numerico entero > 0  :");
+	ingreso_num=int(ingreso_num);
 	if ingreso_num==0:
 		return("nada")
 #	if isinstance(ingreso, int) and ingreso !=0:
@@ -298,11 +141,9 @@ print (funcion());
 print ((lista_datos_ingresados));
 print (pares);
 print (impares);
-print (input("Fin ej000_AMBITOS_4 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 000_AMBITOS_5
-print("Inicio ej000_AMBITOS_5");
+nuevo(3);
+#################################################################
+#IO Ej_AMBITOS_4");
 def exterior():
     variable = "local"
     print("exterior - principio :", variable);
@@ -313,11 +154,9 @@ def exterior():
     interior();
     print("exterior - final:", variable);
 exterior();
-print (input("Fin ej000_AMBITOS_5 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 000_AMBITOS_6
-print("Inicio ej000_AMBITOS_6");
+nuevo(4);
+#################################################################
+#IO Ej_AMBITOS_5");
 print ("La variablo `global` puede ser usada dentro y fuera de una funcion",);
 def funcion_ext():
     variable = 20
@@ -332,11 +171,9 @@ def funcion_ext():
     print("Despues de llamar a la funcion_int: ", variable);
 funcion_ext();
 print("variable en funcion_ext : ", variable);
-print (input("Fin ej000_AMBITOS_6 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 000_AMBITOS_7
-print("Inicio ej000_AMBITOS_7");
+nuevo(5);
+#################################################################
+#IO Ej_AMBITOS_6");
 def prueba_ambitos():
     def hacer_local():
         algo = "algo local"
@@ -356,11 +193,9 @@ def prueba_ambitos():
 
 prueba_ambitos();
 print("In global scope:", algo);
-print (input("Fin ej000_AMBITOS_7 \n		continuar?"));
-limpiar();
-print("#########################################################");
-# Ej 000_AMBITOS_8
-print("Inicio ej000_AMBITOS_8");
+nuevo(6);
+#################################################################
+#IO Ej_AMBITOS_7");
 print("este programa dara un error");
 distancia=10#             Define variable local (ámbito programa principal);
 velocidad=distancia/1
@@ -383,5 +218,6 @@ print("distancia= "+ str(distancia));
 print("tiempo dos= ...'NameError...'");
 # Intenta mostrar la variable 'tiempo. Se produce una excepción (error) de tipo NameError
 # porque la variable no pertenece a este ámbito: # NameError: name 'tiempo' is not defined
-print(tiempo);
-#print (input("Fin ej000_AMBITOS_8 		continuar?"));
+print(tiempo);#<--------------------error
+nuevo(7,"fin");
+#################################################################
